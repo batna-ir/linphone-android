@@ -265,7 +265,7 @@
     <!-- Side Menu -->
     <string name="menu_logout">خروج</string>
     <string name="menu_assistant">دستیار</string>
-    <string name="menu_settings">نتظیمات</string>
+    <string name="menu_settings">تنظیمات</string>
     <string name="menu_recordings">ظبط ها</string>
     <string name="menu_about">درباره ی</string>
     <string name="quit">خروج</string>
@@ -300,59 +300,61 @@
     <string name="call_stats_jitter_buffer">Jitter بافر:</string>
     <string name="call_stats_encoder_name">کدگذاری:</string>
     <string name="call_stats_decoder_name">کدگشایی:</string>
-    <string name="call_stats_player_filter">Player filter:</string>
-    <string name="call_stats_display_filter">Display filter:</string>
-    <string name="call_stats_capture_filter">Capture filter:</string>
-    <string name="call">Call</string>
-    <string name="call_log_delete_dialog">Do you want to delete the selected call logs?</string>
-
+    <string name="call_stats_player_filter">فیلتر پخش کننده:</string>
+    <string name="call_stats_display_filter">فیلتر تصویر:</string>
+    <string name="call_stats_capture_filter">فیلتر ضبط:</string>
+    <string name="call">تماس</string>
+    <string name="call_log_delete_dialog">آیا می خواهید گزارش های تماس انتخاب شده را حذف کنید?</string>
     <!-- Recordings -->
-    <string name="no_recordings">No recordings</string>
+    <string name="no_recordings">ضبط نشده</string>
     <string name="recordings_delete_dialog">Do you want to delete the selected recordings?</string>
 
     <!-- About -->
-    <string name="menu_send_log">Send log</string>
-    <string name="menu_reset_log">Reset log</string>
+    <string name="menu_send_log">ارسال گزارش</string>
+    <string name="menu_reset_log">تنظیم مجدد ورود به سیستم</string>
+
+
 
     <!-- Service -->
-    <string name="incall_notif_active">Audio call ongoing</string>
-    <string name="incall_notif_paused">Paused call ongoing</string>
-    <string name="incall_notif_video">Video capturing call ongoing</string>
-    <string name="incall_notif_incoming">Call incoming</string>
-    <string name="incall_notif_outgoing">Call outgoing</string>
-    <string name="notification_started">started</string>
-    <string name="unread_messages">%i unread messages</string>
-    <string name="missed_calls_notif_title">Missed call</string>
-    <string name="missed_calls_notif_body">%i missed calls</string>
+    <string name="incall_notif_active">تماس صوتی در حال انجام است</string>
+    <string name="incall_notif_paused">ادامه مکالمه متوقف شده است</string>
+
+    <string name="incall_notif_video">ضبط تماس ویدیویی در حال انجام است</string>
+    <string name="incall_notif_incoming">تماس ورودی</string>
+    <string name="incall_notif_outgoing">خروجی تماس</string>
+    <string name="notification_started">شروع شد</string>
+    <string name="unread_messages">%i پیام های خوانده نشده</string>
+    <string name="missed_calls_notif_title">تماس های از دست رفته</string>
+    <string name="missed_calls_notif_body">%i تماس های از دست رفته</string>
 
     <!-- Errors -->
-    <string name="skipable_error_service_not_ready">Warning: service is not ready</string>
-    <string name="error">Error</string>
-    <string name="file_transfer_error">File transfer error</string>
-    <string name="warning_wrong_destination_address">Cannot build destination address from %s</string>
-    <string name="error_unknown">Unknown error</string>
-    <string name="error_call_declined">Call declined</string>
-    <string name="error_user_busy">User busy</string>
-    <string name="error_user_not_found">User not found</string>
-    <string name="error_incompatible_media">Incompatible media parameters</string>
-    <string name="error_low_bandwidth">Your caller has low bandwidth, video cannot be started</string>
-    <string name="error_network_unreachable">Network is unreachable</string>
-    <string name="error_bad_credentials">Bad credentials</string>
+    <string name="skipable_error_service_not_ready">اخطار: خدمات آماده نیست</string>
+    <string name="error">خطا</string>
+    <string name="file_transfer_error">خطای انتقال فایل</string>
+    <string name="warning_wrong_destination_address">آدرس مقصد نمی تواند ایجاد شود %s</string>
+    <string name="error_unknown">خطای ناشناخته</string>
+    <string name="error_call_declined">تماس رد شده</string>
+    <string name="error_user_busy">کاربر مشغول است</string>
+    <string name="error_user_not_found">کاربر یافت نشد</string>
+    <string name="error_incompatible_media">پارامترهای رسانه ای ناسازگار</string>
+    <string name="error_low_bandwidth">تماس گیرنده پهنای باند کمی دارد ، فیلم آغاز نمی شود</string>
+    <string name="error_network_unreachable">شبکه در دسترس نیست</string>
+    <string name="error_bad_credentials">اعتبار بد</string>
     <string name="error_unauthorized">Unauthorized</string>
-    <string name="error_io_error">Network error</string>
-    <string name="download_image_failed">Download failed. Please check your network connection or try again later.</string>
-    <string name="remote_provisioning_failure">Failed to download or apply remote provisioning profile…</string>
-    <string name="remote_provisioning_again_title">Remote provisioning</string>
-    <string name="remote_provisioning_again_message">Do you want to change the provisioning URI?</string>
+    <string name="error_io_error">غیرمجاز</string>
+    <string name="download_image_failed">دانلود نشد. لطفاً اتصال شبکه خود را بررسی کنید یا بعدا دوباره امتحان کنید.</string>
+    <string name="remote_provisioning_failure">دانلود یا اعمال نمایه ارائه از راه دور انجام نشد …</string>
+    <string name="remote_provisioning_again_title">تامین از راه دور</string>
+    <string name="remote_provisioning_again_message">آیا می خواهید URI تأمین کننده را تغییر دهید؟</string>
 
     <!-- Account Settings -->
-    <string name="pref_sipaccount">SIP Account</string>
-    <string name="pref_manage_title">Manage</string>
-    <string name="pref_disable_account">Disable</string>
-    <string name="pref_proxy">Proxy</string>
-    <string name="pref_domain">Domain*</string>
-    <string name="pref_passwd">Password*</string>
-    <string name="pref_username">Username*</string>
+    <string name="pref_sipaccount">SIP حساب</string>
+    <string name="pref_manage_title">مدیریت کنید</string>
+    <string name="pref_disable_account">غیرفعال</string>
+    <string name="pref_proxy">پروکسی</string>
+    <string name="pref_domain">دامنه*</string>
+    <string name="pref_passwd">گذرواژه*</string>
+    <string name="pref_username">نام کاربری*</string>
     <string name="pref_enable_outbound_proxy">Outbound proxy</string>
     <string name="pref_help_proxy">SIP proxy hostname or ip address (optional)</string>
     <string name="pref_help_outbound_proxy">Route all calls through SIP proxy</string>
