@@ -19,6 +19,7 @@
  */
 package org.linphone.assistant;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -33,6 +34,7 @@ import org.linphone.core.tools.Log;
 import org.linphone.core.tools.OpenH264DownloadHelper;
 import org.linphone.core.tools.OpenH264DownloadHelperListener;
 import org.linphone.settings.LinphonePreferences;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class OpenH264DownloadAssistantActivity extends AssistantActivity {
     private TextView mYes, mNo;
@@ -40,6 +42,11 @@ public class OpenH264DownloadAssistantActivity extends AssistantActivity {
 
     private OpenH264DownloadHelper mHelper;
     private OpenH264DownloadHelperListener mListener;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

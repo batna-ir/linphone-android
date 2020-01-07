@@ -20,6 +20,7 @@
 package org.linphone.activities;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -34,9 +35,15 @@ import org.linphone.service.LinphoneService;
 import org.linphone.service.ServiceWaitThread;
 import org.linphone.service.ServiceWaitThreadListener;
 import org.linphone.settings.LinphonePreferences;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /** Creates LinphoneService and wait until Core is ready to start main Activity */
 public class LinphoneLauncherActivity extends Activity implements ServiceWaitThreadListener {
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

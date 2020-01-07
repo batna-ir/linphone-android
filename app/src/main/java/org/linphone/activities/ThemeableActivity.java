@@ -19,6 +19,7 @@
  */
 package org.linphone.activities;
 
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -26,8 +27,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import org.linphone.R;
 import org.linphone.settings.LinphonePreferences;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public abstract class ThemeableActivity extends AppCompatActivity {
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

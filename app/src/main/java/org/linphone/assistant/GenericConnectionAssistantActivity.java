@@ -19,6 +19,7 @@
  */
 package org.linphone.assistant;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -33,11 +34,17 @@ import org.linphone.core.AccountCreator;
 import org.linphone.core.Core;
 import org.linphone.core.TransportType;
 import org.linphone.core.tools.Log;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class GenericConnectionAssistantActivity extends AssistantActivity implements TextWatcher {
     private TextView mLogin;
     private EditText mUsername, mPassword, mDomain, mDisplayName;
     private RadioGroup mTransport;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

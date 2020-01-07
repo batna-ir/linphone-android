@@ -20,6 +20,7 @@
 package org.linphone.assistant;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.telephony.TelephonyManager;
 import android.view.KeyEvent;
@@ -40,6 +41,7 @@ import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
 import org.linphone.dialer.DialerActivity;
 import org.linphone.settings.LinphonePreferences;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public abstract class AssistantActivity extends LinphoneGenericActivity
         implements CountryPicker.CountryPickedListener {
@@ -47,6 +49,11 @@ public abstract class AssistantActivity extends LinphoneGenericActivity
     private AlertDialog mCountryPickerDialog;
 
     private CountryPicker mCountryPicker;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onResume() {

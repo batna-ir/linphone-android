@@ -21,6 +21,7 @@ package org.linphone.call;
 
 import android.Manifest;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -70,6 +71,7 @@ import org.linphone.dialer.DialerActivity;
 import org.linphone.service.LinphoneService;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.utils.LinphoneUtils;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CallActivity extends LinphoneGenericActivity
         implements CallStatusBarFragment.StatsClikedListener,
@@ -127,6 +129,11 @@ public class CallActivity extends LinphoneGenericActivity
     private CoreListener mListener;
     private AndroidAudioManager mAudioManager;
     private VideoZoomHelper mZoomHelper;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

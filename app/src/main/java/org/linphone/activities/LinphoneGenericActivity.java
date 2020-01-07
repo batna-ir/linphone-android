@@ -19,6 +19,7 @@
  */
 package org.linphone.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Surface;
@@ -27,8 +28,14 @@ import org.linphone.LinphoneManager;
 import org.linphone.core.Core;
 import org.linphone.core.tools.Log;
 import org.linphone.service.LinphoneService;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public abstract class LinphoneGenericActivity extends ThemeableActivity {
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

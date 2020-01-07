@@ -20,6 +20,7 @@
 package org.linphone.call;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -47,6 +48,7 @@ import org.linphone.core.Reason;
 import org.linphone.core.tools.Log;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.utils.LinphoneUtils;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CallOutgoingActivity extends LinphoneGenericActivity implements OnClickListener {
     private TextView mName, mNumber;
@@ -55,6 +57,11 @@ public class CallOutgoingActivity extends LinphoneGenericActivity implements OnC
     private Call mCall;
     private CoreListenerStub mListener;
     private boolean mIsMicMuted, mIsSpeakerEnabled;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -19,6 +19,7 @@
  */
 package org.linphone.assistant;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -37,6 +38,7 @@ import org.linphone.core.AccountCreatorListenerStub;
 import org.linphone.core.Core;
 import org.linphone.core.DialPlan;
 import org.linphone.core.tools.Log;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class PhoneAccountCreationAssistantActivity extends AssistantActivity {
     private TextView mCountryPicker, mError, mSipUri, mCreate;
@@ -44,6 +46,11 @@ public class PhoneAccountCreationAssistantActivity extends AssistantActivity {
     private CheckBox mUseUsernameInsteadOfPhoneNumber;
 
     private AccountCreatorListenerStub mListener;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

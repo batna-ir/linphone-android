@@ -20,6 +20,7 @@
 package org.linphone.assistant;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.TextureView;
@@ -31,11 +32,17 @@ import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
 import org.linphone.core.tools.Log;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class QrCodeConfigurationAssistantActivity extends AssistantActivity {
     private TextureView mQrcodeView;
 
     private CoreListenerStub mListener;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

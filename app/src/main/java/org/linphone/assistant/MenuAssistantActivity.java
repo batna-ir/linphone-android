@@ -19,6 +19,7 @@
  */
 package org.linphone.assistant;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -27,8 +28,13 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import org.linphone.R;
 import org.linphone.settings.LinphonePreferences;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MenuAssistantActivity extends AssistantActivity {
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -19,6 +19,7 @@
  */
 package org.linphone.assistant;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -39,12 +40,18 @@ import org.linphone.core.Core;
 import org.linphone.core.DialPlan;
 import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class PhoneAccountLinkingAssistantActivity extends AssistantActivity {
     private TextView mCountryPicker, mError, mLink;
     private EditText mPrefix, mPhoneNumber;
 
     private AccountCreatorListenerStub mListener;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

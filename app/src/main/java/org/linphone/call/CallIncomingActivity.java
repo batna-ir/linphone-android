@@ -52,6 +52,7 @@ import org.linphone.core.CoreListenerStub;
 import org.linphone.core.tools.Log;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.utils.LinphoneUtils;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CallIncomingActivity extends LinphoneGenericActivity {
     private TextView mName, mNumber;
@@ -59,6 +60,11 @@ public class CallIncomingActivity extends LinphoneGenericActivity {
     private CoreListenerStub mListener;
     private boolean mAlreadyAcceptedOrDeniedCall;
     private TextureView mVideoDisplay;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

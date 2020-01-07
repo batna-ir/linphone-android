@@ -21,6 +21,7 @@ package org.linphone.assistant;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -33,6 +34,7 @@ import org.linphone.core.AccountCreator;
 import org.linphone.core.AccountCreatorListenerStub;
 import org.linphone.core.tools.Log;
 import org.linphone.settings.LinphonePreferences;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class PhoneAccountValidationAssistantActivity extends AssistantActivity {
     private TextView mFinishCreation;
@@ -42,6 +44,11 @@ public class PhoneAccountValidationAssistantActivity extends AssistantActivity {
     private int mActivationCodeLength;
     private boolean mIsLinking = false, mIsLogin = false;
     private AccountCreatorListenerStub mListener;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

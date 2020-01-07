@@ -74,6 +74,7 @@ import org.linphone.settings.LinphonePreferences;
 import org.linphone.settings.SettingsActivity;
 import org.linphone.utils.DeviceUtils;
 import org.linphone.utils.LinphoneUtils;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public abstract class MainActivity extends LinphoneGenericActivity
         implements StatusBarFragment.MenuClikedListener, SideMenuFragment.QuitClikedListener {
@@ -98,6 +99,11 @@ public abstract class MainActivity extends LinphoneGenericActivity
     protected String[] mPermissionsToHave;
 
     private CoreListenerStub mListener;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

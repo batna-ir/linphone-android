@@ -21,6 +21,7 @@ package org.linphone.assistant;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -42,6 +43,7 @@ import org.linphone.core.CoreListenerStub;
 import org.linphone.core.tools.Log;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.utils.LinphoneUtils;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class RemoteConfigurationAssistantActivity extends AssistantActivity {
     private static final int QR_CODE_ACTIVITY_RESULT = 1;
@@ -52,6 +54,11 @@ public class RemoteConfigurationAssistantActivity extends AssistantActivity {
     private RelativeLayout mWaitLayout;
 
     private CoreListenerStub mListener;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
