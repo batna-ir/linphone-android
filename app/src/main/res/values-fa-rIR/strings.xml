@@ -412,7 +412,7 @@
     <string name="pref_echo_canceller_calibration">تنظیم لغو اکو</string>
     <string name="pref_echo_tester">تست اکو</string>
     <string name="ec_calibrating">کالیبراسیون…</string>
-    <string name="ec_calibrated">کالیبره شده در s% میلی ثانیه</string>
+    <string name="ec_calibrated">کالیبره شده در %S میلی ثانیه</string>
     <string name="no_echo">بدون اکو</string>
     <string name="failed">ناموفق</string>
     <string name="pref_adaptive_rate_control">تطبیق نرخ کنترل</string>

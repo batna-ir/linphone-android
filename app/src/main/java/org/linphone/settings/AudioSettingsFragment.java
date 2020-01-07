@@ -20,6 +20,7 @@
 package org.linphone.settings;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
@@ -29,7 +30,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import androidx.annotation.Nullable;
+
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Core;
@@ -41,6 +42,8 @@ import org.linphone.settings.widget.ListSetting;
 import org.linphone.settings.widget.SettingListenerBase;
 import org.linphone.settings.widget.SwitchSetting;
 import org.linphone.settings.widget.TextSetting;
+
+import androidx.annotation.Nullable;
 
 public class AudioSettingsFragment extends SettingsFragment {
     private View mRootView;
@@ -188,6 +191,7 @@ public class AudioSettingsFragment extends SettingsFragment {
                 });
     }
 
+    @SuppressLint("StringFormatInvalid")
     private void updateValues() {
         mEchoCanceller.setChecked(mPrefs.echoCancellationEnabled());
 
