@@ -355,100 +355,100 @@
     <string name="pref_domain">دامنه*</string>
     <string name="pref_passwd">گذرواژه*</string>
     <string name="pref_username">نام کاربری*</string>
-    <string name="pref_enable_outbound_proxy">Outbound proxy</string>
-    <string name="pref_help_proxy">SIP proxy hostname or ip address (optional)</string>
-    <string name="pref_help_outbound_proxy">Route all calls through SIP proxy</string>
-    <string name="pref_help_username">Example: john if your account is john@sip.example.org</string>
+    <string name="pref_enable_outbound_proxy">پروکسی خارج از کشور</string>
+    <string name="pref_help_proxy">نام میزبان پروکسی SIP یا آدرس IP (اختیاری)</string>
+    <string name="pref_help_outbound_proxy">مسیریابی همه تماس ها از طریق پروکسی SIP</string>
+    <string name="pref_help_username">مثال: اگر حساب شماjohn@sip.example.orgباشد</string>
     <string name="pref_help_domain">sip.example.org if your account is john@sip.example.org</string>
-    <string name="pref_help_password">You have to re-enter your password if you edit your username and/or the domain</string>
-    <string name="pref_expire_title">Expire</string>
+    <string name="pref_help_password">اگر نام کاربری یا دامنه خود را ویرایش کنید، باید رمزعبور خود را دوباره وارد کنید</string>
+    <string name="pref_expire_title">منقضی شده</string>
     <string name="pref_avpf">AVPF</string>
     <string name="pref_avpf_rr_interval"> AVPF regular RTCP interval in seconds (between 1 and 5)</string>
-    <string name="pref_escape_plus">Replace + by 00</string>
-    <string name="pref_link_account">Link your account</string>
-    <string name="pref_auth_userid">Auth userid</string>
-    <string name="pref_help_auth_userid">Enter authentication userid (optional)</string>
-    <string name="pref_display_name">Display name</string>
-    <string name="pref_help_display_name">Enter display name (optional)</string>
-    <string name="pref_prefix">Prefix</string>
-    <string name="pref_prefix_desc">Prefix for your country (without the +)</string>
-    <string name="pref_transport">Transport</string>
+    <string name="pref_escape_plus">جایگزینی با ۰۰</string>
+    <string name="pref_link_account">حساب خود را پیوند دهید</string>
+    <string name="pref_auth_userid">تایید شناسه</string>
+    <string name="pref_help_auth_userid">شناسه احراز هویت را وارد کنید(اختیاری)</string>
+    <string name="pref_display_name">نمایش نام</string>
+    <string name="pref_help_display_name">نام را وارد کنید (اختیاری)</string>
+    <string name="pref_prefix">پیشوند</string>
+    <string name="pref_prefix_desc">پیشوند برای کشور شما (بدون +)</string>
+    <string name="pref_transport">انتقال</string>
     <string name="pref_transport_udp">UDP</string>
     <string name="pref_transport_tcp">TCP</string>
     <string name="pref_transport_tls">TLS</string>
-    <string name="pref_delete_account">Delete this account</string>
-    <string name="pref_change_password">Change password</string>
-    <string name="pref_default_account">Use as default</string>
-    <string name="pref_password_changed">Password changed</string>
-    <string name="pref_proxy_push_notif">Allow push notification</string>
+    <string name="pref_delete_account">حذف این اکانت</string>
+    <string name="pref_change_password">تغییر گذرواژه</string>
+    <string name="pref_default_account">استفاده به عنوان پیش فرض</string>
+    <string name="pref_password_changed">گذرواژه تغییر کرد</string>
+    <string name="pref_proxy_push_notif">اعلان مجاز است</string>
 
     <!-- Settings -->
-    <string name="pref_sipaccounts">SIP Accounts</string>
-    <string name="default_account_flag">Default account</string>
-    <string name="pref_add_account">Add account</string>
-    <string name="pref_in_app_store">In-app Store</string>
-    <string name="pref_tunnel_title">Tunnel</string>
-    <string name="pref_tunnel_host">Hostname</string>
-    <string name="pref_tunnel_port">Port</string>
-    <string name="pref_tunnel_dual_mode">Enable dual mode</string>
-    <string name="pref_tunnel_host_2">Hostname (2nd server for dual mode)</string>
-    <string name="pref_tunnel_port_2">Port (2nd server for dual mode)</string>
-    <string name="pref_tunnel_mode">Mode</string>
+    <string name="pref_sipaccounts">SIP حساب های</string>
+    <string name="default_account_flag">حساب پیش فرض</string>
+    <string name="pref_add_account">افزودن اکانت</string>
+    <string name="pref_in_app_store">در فروشگاه </string>
+    <string name="pref_tunnel_title">تونل</string>
+    <string name="pref_tunnel_host">نام میزبان</string>
+    <string name="pref_tunnel_port">پورت</string>
+    <string name="pref_tunnel_dual_mode">فعال سازی حالت دوگانه</string>
+    <string name="pref_tunnel_host_2">نام میزبان (سرور دوم برای حالت دوگانه)</string>
+    <string name="pref_tunnel_port_2">پورت (سرور دوم برای حالت دوگانه)</string>
+    <string name="pref_tunnel_mode">حالت</string>
     <!--do not change order without changing corresponding entry_values in non_localizable_strings.xml-->
     <string-array name="tunnel_mode_entries">
-        <item>disabled</item>
-        <item>3G only</item>
-        <item>always</item>
-        <item>auto</item>
+        <item>غیر فعال</item>
+        <item>3G فقط</item>
+        <item>همیشه</item>
+        <item>خودکار</item>
     </string-array>
-    <string name="pref_none">None</string>
-    <string name="pref_preferences_title">Preferences</string>
-    <string name="pref_video_enable_title">Enable video</string>
+    <string name="pref_none">هیچ یک</string>
+    <string name="pref_preferences_title">اولویت ها</string>
+    <string name="pref_video_enable_title">فعال سازی ویدیو</string>
 
     <!-- Audio settings -->
-    <string name="pref_audio_title">Audio</string>
-    <string name="pref_echo_cancellation">Echo cancellation</string>
-    <string name="pref_echo_cancellation_summary">Removes the echo heard by other end</string>
-    <string name="pref_echo_canceller_calibration">Echo canceler calibration</string>
-    <string name="pref_echo_tester">Test echo</string>
-    <string name="ec_calibrating">Calibrating…</string>
-    <string name="ec_calibrated">Calibrated in %s ms</string>
-    <string name="no_echo">No echo</string>
-    <string name="failed">failed</string>
-    <string name="pref_adaptive_rate_control">Adaptive rate control</string>
-    <string name="pref_codec_bitrate_limit">Codec bitrate limit</string>
+    <string name="pref_audio_title">سمعی</string>
+    <string name="pref_echo_cancellation">لغو اکو</string>
+    <string name="pref_echo_cancellation_summary">حذف اکو شنیده شده توسط پایانه دیگر</string>
+    <string name="pref_echo_canceller_calibration">تنظیم لغو اکو</string>
+    <string name="pref_echo_tester">تست اکو</string>
+    <string name="ec_calibrating">کالیبراسیون…</string>
+    <string name="ec_calibrated">کالیبره شده در s% میلی ثانیه</string>
+    <string name="no_echo">بدون اکو</string>
+    <string name="failed">ناموفق</string>
+    <string name="pref_adaptive_rate_control">تطبیق نرخ کنترل</string>
+    <string name="pref_codec_bitrate_limit">حد نرخ بیت کدک</string>
     <string name="pref_mic_gain_db">Microphone gain (in db)</string>
     <string name="pref_playback_gain_db">Playback gain (in db)</string>
-    <string name="pref_codecs">Codecs</string>
+    <string name="pref_codecs">کدک ها</string>
 
     <!-- Video settings -->
-    <string name="pref_video_title">Video</string>
-    <string name="pref_video_camera_device">Camera</string>
-    <string name="pref_overlay">Video overlay</string>
-    <string name="pref_overlay_summary">Display call video in overlay when outside the application</string>
-    <string name="pref_video_use_front_camera_title">Use front camera</string>
-    <string name="pref_video_initiate_call_with_video_title">Initiate video calls</string>
-    <string name="pref_video_initiate_call_with_video">Always send video requests</string>
-    <string name="pref_video_automatically_accept_video_title">Accept incoming video requests</string>
-    <string name="pref_video_automatically_accept_video">Always accept video requests</string>
-    <string name="pref_video_preset">Video preset</string>
-    <string name="pref_preferred_video_size">Preferred video size</string>
-    <string name="pref_preferred_fps">Preferred FPS</string>
-    <string name="pref_preview_video">Display camera preview on dialer</string>
-    <string name="pref_bandwidth_limit">Bandwidth limit in kbits/s</string>
-    <string name="pref_video_codecs_title">Codecs</string>
+    <string name="pref_video_title">ویدئو</string>
+    <string name="pref_video_camera_device">دوربین</string>
+    <string name="pref_overlay">پوشش ویدئویی</string>
+    <string name="pref_overlay_summary">هنگامی که خارج از برنامه هستید، تصویر تماس را بر روی برنامه های دیگر نمایش بده</string>
+    <string name="pref_video_use_front_camera_title">استفاده از دوربین جلو</string>
+    <string name="pref_video_initiate_call_with_video_title">آغاز تماس های ویدئویی</string>
+    <string name="pref_video_initiate_call_with_video">همیشه درخواست ویدیویی را ارسال کنید</string>
+    <string name="pref_video_automatically_accept_video_title">پذیرش درخواست های ورودی ویدئو</string>
+    <string name="pref_video_automatically_accept_video">همیشه درخواست های ویدیویی را بپذیرید</string>
+    <string name="pref_video_preset">ویدئو از پیش تعیین شده</string>
+    <string name="pref_preferred_video_size">اندازه ویدئو ترجیحی</string>
+    <string name="pref_preferred_fps">نرخ فریم ترجیحی</string>
+    <string name="pref_preview_video"> پیش نمایش دوربین بر روی شماره گیر</string>
+    <string name="pref_bandwidth_limit">حدپهنای باند kbits /s</string>
+    <string name="pref_video_codecs_title">کدک ها</string>
 
     <!-- Contact settings -->
-    <string name="pref_contact_sync_title">Presence information in native contact</string>
-    <string name="pref_contact_sync_subtitle">Inserting information shortcuts from the Linphone contact into native Android contacts</string>
-    <string name="pref_contact_title">Contact</string>
-    <string name="pref_contact_display_contact_organization_title">Display contact organization</string>
-    <string name="pref_create_contact_shortcuts">Create shortcuts in launcher</string>
+    <string name="pref_contact_sync_title">اطلاعات مربوط به حضور در تماس های بومی</string>
+    <string name="pref_contact_sync_subtitle">درج میانبرهای اطلاعات از مخاطبین سبا تاک به مخاطبین بومی Android</string>
+    <string name="pref_contact_title">مخاطبین</string>
+    <string name="pref_contact_display_contact_organization_title">سازماندهی نمایش مخاطبین</string>
+    <string name="pref_create_contact_shortcuts">میانبرها را صفحه نمایش ایجاد کنید</string>
 
     <!-- Call settings -->
-    <string name="pref_call_title">Call</string>
-    <string name="pref_device_ringtone">Use device ringtone</string>
-    <string name="pref_vibrate_on_incoming_calls">Vibrate while incoming call is ringing</string>
+    <string name="pref_call_title">تماس</string>
+    <string name="pref_device_ringtone">از زنگ دستگاه استفاده کنید</string>
+    <string name="pref_vibrate_on_incoming_calls">لرزش زمانی که تماس ورودی زنگ می خورد</string>
     <string name="pref_auto_answer">Auto answer incoming calls</string>
     <string name="pref_auto_answer_time">Auto answer time (in milliseconds)</string>
     <string name="pref_rfc2833_dtmf">Send in-band DTMFs (RFC2833)</string>
