@@ -6,8 +6,8 @@
     <string name="addressbook_label">سبا تاک</string>
     <string name="notification_title">سبا تاک</string>
     <string name="wait_dialog_text">Starting up</string>
-    <string name="notification_registered">s% اتصال برقرار شده</string>
-    <string name="notification_register_failure">s% اتصال برقرار نشد</string>
+    <string name="notification_registered">%s اتصال برقرار شده</string>
+    <string name="notification_register_failure">%s اتصال برقرار نشد</string>
     <string name="tunnel_host" />
     <string name="about_version">سبا تاک %s</string>
     <string name="about_liblinphone_version">هسته سبا تاک %s</string>
@@ -53,7 +53,7 @@
     <string name="decline">Decline</string>
     <string name="conference">کنفرانس</string>
     <string name="link">پیوند</string>
-    <string name="link_account_popup">آیا می خواهید حساب s% را با شماره تماس خود پیوند دهید؟</string>
+    <string name="link_account_popup">آیا می خواهید حساب %s را با شماره تماس خود پیوند دهید؟</string>
     <string name="maybe_later">شاید بعدا</string>
     <string name="later">بعدا</string>
     <string name="no">حیر</string>
@@ -119,12 +119,12 @@
     <string name="wizard_email_incorrect">ایمیل شما اشتباه است</string>
     <string name="wizard_password_incorrect">گذرواژه شما اشباه است</string>
     <string name="wizard_passwords_unmatched">رمزهای ورود مطابقت ندارند.</string>
-    <string name="setup_confirm_username">نام کاربری شماs% خواهد بود. n \n\ ممکن است با ورودی شما  متفاوت باشد. n\ آیا می پذیرید؟</string>
+    <string name="setup_confirm_username">نام کاربری شما%s خواهد بود. n \n\ ممکن است با ورودی شما  متفاوت باشد. n\ آیا می پذیرید؟</string>
     <string name="first_launch_no_login_password">لطفا نام کاربری و گذرواژه خود را وارد کنید</string>
     <string name="forgot_password">گذرواژه خود را فراموش کرده اید؟</string>
     <string name="assistant_choose_country">یک کشور را انتخاب کنید</string>
     <string name="select_your_country">کشور خود را انتخاب کنید</string>
-    <string name="country_code">(s%)</string>
+    <string name="country_code">(%s)</string>
     <string name="use_username_instead_or_phone_number">استفاده از یک نام کاربری (اختیاری)</string>
     <string name="use_email_for_validation">برای اعتبار سنجی حساب از آدرس ایمیل استفاده کنید</string>
     <string name="login_with_username">به جای شماره تلفن خود از نام کاربری و رمز عبور خود استفاده کنید</string>
@@ -191,8 +191,8 @@
     <string name="delete_conversation">آیا می خواهید مکالمه انتخاب شده را حذف کنید؟</string>
     <string name="delete_message">آیا می خواهید پیام انتخاب شده را حذف کنید؟</string>
     <string name="remote_composing">از راه دور در حال نوشتن است …</string>
-    <string name="remote_composing_single">S% در حال نوشتن…</string>
-    <string name="remote_composing_multiple">S% می نویسند …</string>
+    <string name="remote_composing_single">%s در حال نوشتن…</string>
+    <string name="remote_composing_multiple">%s می نویسند …</string>
     <string name="share_picture_size_small">کوچک</string>
     <string name="share_picture_size_medium">متوسط</string>
     <string name="share_picture_size_large">بزرگ</string>
@@ -225,13 +225,13 @@
     <string name="chat_room_creation_filter_hint">جستجوی مخاطب</string>
     <string name="conference_created">شما به گروه پیوسته اید</string>
     <string name="conference_destroyed">شما گروه را ترک کرده اید</string>
-    <string name="participant_added">s% پیوست</string>
-    <string name="participant_removed">s% ترک کرد</string>
+    <string name="participant_added">%s پیوست</string>
+    <string name="participant_removed">%s ترک کرد</string>
     <string name="device_added">دستگاه جدید برای %s</string>
     <string name="device_removed">دستگاه برای %s حذف شد</string>
     <string name="subject_changed">عنوان جدید: %s</string>
-    <string name="admin_set">s% مدیر</string>
-    <string name="admin_unset">s% دیگر مدیر نیست</string>
+    <string name="admin_set">%s مدیر</string>
+    <string name="admin_unset">%s دیگر مدیر نیست</string>
     <string name="group_chat_notif" formatted="false">%1: %2</string>
     <string name="chat_room_you_are_now_admin">شما اکنون مدیر هستید</string>
     <string name="chat_room_you_are_no_longer_admin">شما اکنون مدیر نیستید</string>
@@ -241,7 +241,7 @@
     <string name="chat_room_delete_dialog">آیا می خواهید مکالمات انتخاب شده را حذف و ترک کنید؟</string>
     <string name="separator">:&#160;</string>
     <string name="imdn_info">وضعیت تحویل</string>
-    <string name="chat_room_devices">s%\'s دستگاه ها</string>
+    <string name="chat_room_devices">%s\'s دستگاه ها</string>
     <string name="group_chat_room_devices">مکالمات\'s دستگاه ها</string>
     <string name="add_to_contacts">افزودن به مخاطبین</string>
     <string name="lime_security_popup">پیام های فوری در مکالمات ایمن رمزگذاری شده اند.با تأیید اعتبار شرکت کنندگان، می توانید سطح امنیتی یک مکالمه را ارتقا دهید. برای این کار با مخاطب تماس بگیرید و مراحل تأیید اعتبار را دنبال کنید.</string>
