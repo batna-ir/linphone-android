@@ -19,7 +19,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,6 +101,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/resizable_textfield"
                         android:inputType="textPassword"
+                        android:textDirection="rtl"
                         android:maxLines="1"
                         android:hint="@string/password"
                         android:textColor="@color/black_color" />
