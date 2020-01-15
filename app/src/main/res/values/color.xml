@@ -2,11 +2,11 @@
 <resources>
     <color name="transparent_color">#00000000</color>
 
-    <color name="primary_color">#8080ff</color> <!-- Try to have a color that renders well on both light & dark theme -->
+    <color name="primary_color">#2460A7</color> <!-- Try to have a color that renders well on both light & dark theme -->
     <!-- You can use https://material.io/design/color/#tools-for-picking-colors to get dark color value from primary -->
-    <color name="primary_dark_color">#6666ff</color>
-    <color name="primary_light_color">#b3b3ff</color>
-    <color name="notification_led_color">#9999ff</color>
+    <color name="primary_dark_color">#163c69</color>
+    <color name="primary_light_color">#95DBE5</color>
+    <color name="notification_led_color">#078282</color>
 
     <color name="black_color">#000000</color>
     <color name="dark_grey_color">#444444</color>

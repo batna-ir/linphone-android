@@ -20,6 +20,7 @@
 package org.linphone.menu;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -27,15 +28,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
@@ -51,9 +48,18 @@ import org.linphone.settings.LinphonePreferences;
 import org.linphone.settings.SettingsActivity;
 import org.linphone.utils.LinphoneUtils;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+
 public class SideMenuFragment extends Fragment {
     private DrawerLayout mSideMenu;
-    private RelativeLayout mSideMenuContent;
+    private LinearLayout mSideMenuContent;
     private RelativeLayout mDefaultAccount;
     private ListView mAccountsList, mSideMenuItemList;
     private QuitClikedListener mQuitListener;
@@ -154,7 +160,7 @@ public class SideMenuFragment extends Fragment {
         mQuitListener = listener;
     }
 
-    public void setDrawer(DrawerLayout drawer, RelativeLayout content) {
+    public void setDrawer(DrawerLayout drawer, LinearLayout content) {
         mSideMenu = drawer;
         mSideMenuContent = content;
     }
@@ -167,6 +173,7 @@ public class SideMenuFragment extends Fragment {
         openOrCloseSideMenu(false, false);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void openOrCloseSideMenu(boolean open, boolean animate) {
         if (mSideMenu == null || mSideMenuContent == null) return;
 

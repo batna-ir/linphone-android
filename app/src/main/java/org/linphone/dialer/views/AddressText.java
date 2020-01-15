@@ -100,7 +100,7 @@ public class AddressText extends EditText implements AddressType {
             }
         }
 
-        return lo;
+        return 150;
     }
 
     private void refitText(int textWidth, int textHeight) {

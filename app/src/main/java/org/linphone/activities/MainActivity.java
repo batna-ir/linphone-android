@@ -32,6 +32,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -41,9 +42,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.core.app.ActivityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import java.util.ArrayList;
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
@@ -74,6 +72,9 @@ import org.linphone.settings.LinphonePreferences;
 import org.linphone.settings.SettingsActivity;
 import org.linphone.utils.DeviceUtils;
 import org.linphone.utils.LinphoneUtils;
+import java.util.ArrayList;
+import androidx.core.app.ActivityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public abstract class MainActivity extends LinphoneGenericActivity
@@ -180,7 +181,7 @@ public abstract class MainActivity extends LinphoneGenericActivity
                 (StatusBarFragment) getFragmentManager().findFragmentById(R.id.status_fragment);
 
         DrawerLayout mSideMenu = findViewById(R.id.side_menu);
-        RelativeLayout mSideMenuContent = findViewById(R.id.side_menu_content);
+        LinearLayout mSideMenuContent = findViewById(R.id.side_menu_content);
         mSideMenuFragment =
                 (SideMenuFragment)
                         getSupportFragmentManager().findFragmentById(R.id.side_menu_fragment);

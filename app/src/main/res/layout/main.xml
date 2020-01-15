@@ -9,7 +9,7 @@
         android:id="@+id/status_fragment"
         android:name="org.linphone.fragments.StatusBarFragment"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         tools:layout="@layout/status_bar" />
 
     <androidx.drawerlayout.widget.DrawerLayout
@@ -79,15 +79,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/footer_button">
+                    android:background="#ffffff">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/content_description_history"
-                        android:padding="15dp"
-                        android:src="@drawable/footer_history" />
+                        android:src="@drawable/ic_watch" />
 
                     <View
                         android:id="@+id/history_select"
@@ -114,15 +113,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/footer_button">
+                    android:background="@color/white_color">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/content_description_contacts"
-                        android:padding="15dp"
-                        android:src="@drawable/footer_contacts" />
+                        android:src="@drawable/ic_contacts" />
 
                     <View
                         android:id="@+id/contacts_select"
@@ -138,15 +136,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/footer_button">
+                    android:background="@color/white_color">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/content_description_dialer"
-                        android:padding="15dp"
-                        android:src="@drawable/footer_dialer" />
+                        android:src="@drawable/ic_dialpad" />
 
                     <View
                         android:id="@+id/dialer_select"
@@ -162,15 +159,14 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/footer_button">
+                    android:background="@color/white_color">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/content_description_chat_button"
-                        android:padding="15dp"
-                        android:src="@drawable/footer_chat" />
+                        android:src="@drawable/ic_chat_black_24dp" />
 
                     <View
                         android:id="@+id/chat_select"
@@ -206,12 +202,12 @@
         </RelativeLayout>
 
         <!-- Side Menu -->
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/side_menu_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="left">
-
+            android:layout_gravity="right"
+            >
             <fragment
                 android:id="@+id/side_menu_fragment"
                 android:name="org.linphone.menu.SideMenuFragment"
@@ -219,7 +215,7 @@
                 android:layout_height="match_parent"
                 tools:layout="@layout/side_menu" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

@@ -8,36 +8,36 @@
 
     <LinearLayout
         android:id="@+id/layout"
-        android:layoutDirection="ltr"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:gravity="center_vertical"
+        android:layoutDirection="ltr"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layoutDirection="ltr">
+            android:layoutDirection="ltr"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/main_account_display_name"
-            style="@style/main_account_font"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/main_account_display_name"
+                style="@style/main_account_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        <ImageView
-            android:id="@+id/main_account_status"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            <ImageView
+                android:id="@+id/main_account_status"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
 
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="7dp"
-            android:padding="5dp"
-            android:src="@drawable/led_connected" />
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="3dp"
+                android:padding="5dp"
+                android:src="@drawable/led_connected" />
 
         </LinearLayout>
 

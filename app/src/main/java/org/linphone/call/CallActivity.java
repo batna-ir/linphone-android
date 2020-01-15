@@ -27,6 +27,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
@@ -44,12 +45,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
+
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.activities.LinphoneGenericActivity;
@@ -71,6 +67,15 @@ import org.linphone.dialer.DialerActivity;
 import org.linphone.service.LinphoneService;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.utils.LinphoneUtils;
+
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CallActivity extends LinphoneGenericActivity
@@ -135,6 +140,7 @@ public class CallActivity extends LinphoneGenericActivity
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -371,6 +377,10 @@ public class CallActivity extends LinphoneGenericActivity
 
         DrawerLayout sideMenu = findViewById(R.id.side_menu);
         RelativeLayout sideMenuContent = findViewById(R.id.side_menu_content);
+        sideMenuContent.setForegroundGravity(View.TEXT_DIRECTION_LOCALE);
+        sideMenuContent.setForegroundGravity(View.LAYOUT_DIRECTION_LOCALE);
+        sideMenuContent.setGravity(View.LAYOUT_DIRECTION_LOCALE);
+        sideMenuContent.setGravity(View.TEXT_DIRECTION_LOCALE);
         mStatsFragment =
                 (CallStatsFragment) getFragmentManager().findFragmentById(R.id.call_stats_fragment);
         mStatsFragment.setDrawer(sideMenu, sideMenuContent);

@@ -13,22 +13,32 @@
 
         <ImageView
             android:id="@+id/quit_button"
+            android:textDirection="locale"
+            android:layoutDirection="locale"
+            android:layout_marginBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:padding="5dp"
-            android:src="@drawable/quit" />
+            android:visibility="gone"
+            />
 
         <TextView
             android:id="@+id/quit"
+            android:textDirection="locale"
+            android:layoutDirection="locale"
             style="@style/quit_button_font"
+            android:layout_marginBottom="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_toRightOf="@id/quit_button"
+            android:layout_toEndOf="@id/quit_button"
             android:gravity="center_vertical"
-            android:text="@string/quit" />
+            android:text="@string/quit"
+            android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
+
+            />
 
     </RelativeLayout>
 

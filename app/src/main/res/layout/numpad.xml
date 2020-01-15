@@ -27,13 +27,14 @@
             style="@style/DialerDigit"
             android:background="@drawable/numpad_three"
             android:soundEffectsEnabled="true"
-            android:text="3" />
+            android:text="3"/>
 
     </TableRow>
 
     <TableRow
         android:layout_weight="1"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="-60dp">
 
         <org.linphone.dialer.views.Digit
             android:id="@+id/Digit4"
@@ -60,7 +61,8 @@
 
     <TableRow
         android:layout_weight="1"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="-60dp">
 
         <org.linphone.dialer.views.Digit
             android:id="@+id/Digit7"
@@ -87,7 +89,8 @@
 
     <TableRow
         android:layout_weight="1"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="-60dp">
 
         <org.linphone.dialer.views.Digit
             android:id="@+id/DigitStar"
