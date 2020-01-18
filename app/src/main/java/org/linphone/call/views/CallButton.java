@@ -24,7 +24,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
-
+import at.markushi.ui.CircleButton;
 import org.linphone.LinphoneManager;
 import org.linphone.core.Call;
 import org.linphone.core.CallLog;
@@ -33,7 +33,6 @@ import org.linphone.core.ProxyConfig;
 import org.linphone.dialer.views.AddressAware;
 import org.linphone.dialer.views.AddressText;
 import org.linphone.settings.LinphonePreferences;
-import at.markushi.ui.CircleButton;
 
 @SuppressLint("AppCompatCustomView")
 public class CallButton extends CircleButton implements OnClickListener, AddressAware {

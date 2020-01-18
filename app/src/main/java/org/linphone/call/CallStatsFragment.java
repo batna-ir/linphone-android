@@ -27,17 +27,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
-
+import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
+import java.util.Arrays;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Call;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
-
-import java.util.Arrays;
-
-import androidx.annotation.Nullable;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 public class CallStatsFragment extends Fragment {
     private DrawerLayout mSideMenu;
