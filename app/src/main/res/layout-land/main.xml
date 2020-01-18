@@ -18,6 +18,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/status_fragment">
 
+        <!-- Side Menu -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -46,10 +47,10 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.6"
-                    android:gravity="center"
-                    android:singleLine="true"
                     android:ellipsize="end"
-                    android:padding="15dp" />
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:singleLine="true" />
 
                 <View
                     android:layout_width="0dp"
@@ -58,12 +59,13 @@
 
             </LinearLayout>
 
+
             <LinearLayout
                 android:id="@+id/fragmentContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="60dp"
                 android:layout_below="@id/top_bar"
-                android:layout_toRightOf="@+id/footer"
                 android:orientation="horizontal" />
 
             <LinearLayout
@@ -168,7 +170,7 @@
                         android:layout_height="34dp"
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/content_description_chat_button"
-                        android:src="@drawable/ic_chat_black_24dp"  />
+                        android:src="@drawable/ic_chat_black_24dp" />
 
                     <View
                         android:id="@+id/chat_select"
@@ -206,7 +208,6 @@
 
         </RelativeLayout>
 
-        <!-- Side Menu -->
         <LinearLayout
             android:id="@+id/side_menu_content"
             android:layout_width="match_parent"
