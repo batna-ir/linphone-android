@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_bar"
     android:layout_width="match_parent"
     android:layout_height="60dp">
@@ -10,14 +11,16 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
+    <org.linphone.call.views.CallButton
         android:id="@+id/hang_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/hangup"
-        android:contentDescription="@string/content_description_hang_up"
-        android:padding="12dp"
-        android:src="@drawable/call_hangup" />
+        android:layout_weight="1.00"
+        app:cb_color="#cc0000"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/content_description_call"
+        android:padding="20dp"
+        android:src="@drawable/call_hangup"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,12 +36,13 @@
         <ImageView
             android:id="@+id/dialer"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
             android:layout_toLeftOf="@id/left_vertical_divider"
-            android:background="@drawable/button_background_dark"
             android:contentDescription="@string/content_description_numpad"
-            android:padding="15dp"
-            android:src="@drawable/call_numpad" />
+            android:padding="0dp"
+            android:src="@drawable/ic_dialpad" />
+
 
     </RelativeLayout>
 
@@ -56,18 +60,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/right_vertical_divider"
-            android:background="@drawable/footer_button">
+            android:layout_toRightOf="@id/right_vertical_divider">
 
             <ImageView
                 android:id="@+id/chat"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/button_background_dark"
                 android:contentDescription="@string/content_description_chat_button"
-                android:padding="15dp"
-                android:src="@drawable/footer_chat" />
+                android:src="@drawable/ic_chat_black_24dp"/>
 
             <TextView
                 android:id="@+id/missed_chats"

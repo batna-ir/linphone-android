@@ -45,13 +45,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
+
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.activities.LinphoneGenericActivity;
@@ -73,6 +67,15 @@ import org.linphone.dialer.DialerActivity;
 import org.linphone.service.LinphoneService;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.utils.LinphoneUtils;
+
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CallActivity extends LinphoneGenericActivity
@@ -373,7 +376,7 @@ public class CallActivity extends LinphoneGenericActivity
         mMissedMessages = findViewById(R.id.missed_chats);
 
         DrawerLayout sideMenu = findViewById(R.id.side_menu);
-        RelativeLayout sideMenuContent = findViewById(R.id.side_menu_content);
+        LinearLayout sideMenuContent = findViewById(R.id.side_menu_content);
         sideMenuContent.setForegroundGravity(View.TEXT_DIRECTION_LOCALE);
         sideMenuContent.setForegroundGravity(View.LAYOUT_DIRECTION_LOCALE);
         sideMenuContent.setGravity(View.LAYOUT_DIRECTION_LOCALE);

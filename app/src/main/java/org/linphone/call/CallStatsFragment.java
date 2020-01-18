@@ -26,19 +26,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.RelativeLayout;
-import androidx.annotation.Nullable;
-import androidx.drawerlayout.widget.DrawerLayout;
-import java.util.Arrays;
+import android.widget.LinearLayout;
+
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Call;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
 
+import java.util.Arrays;
+
+import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 public class CallStatsFragment extends Fragment {
     private DrawerLayout mSideMenu;
-    private RelativeLayout mSideMenuContent;;
+    private LinearLayout mSideMenuContent;;
     private ExpandableListView mExpandableList;
     private CallStatsAdapter mAdapter;
     private CoreListenerStub mListener;
@@ -96,7 +99,7 @@ public class CallStatsFragment extends Fragment {
         }
     }
 
-    public void setDrawer(DrawerLayout drawer, RelativeLayout content) {
+    public void setDrawer(DrawerLayout drawer, LinearLayout content) {
         mSideMenu = drawer;
         mSideMenuContent = content;
 

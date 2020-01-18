@@ -86,7 +86,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/button_background_drawable"
             android:contentDescription="@string/content_description_toggle_micro"
             android:padding="10dp"
             android:src="@drawable/micro" />
@@ -96,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/button_background_drawable"
+
             android:contentDescription="@string/content_description_toggle_speaker"
             android:padding="15dp"
             android:src="@drawable/speaker" />
@@ -114,12 +113,12 @@
             android:id="@+id/outgoing_hang_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.00"
-            app:cb_color="#cc0000"
             android:layout_marginRight="10dp"
+            android:layout_weight="1.00"
             android:contentDescription="@string/content_description_call"
             android:padding="20dp"
-            android:src="@drawable/call_audio_start"/>
+            android:src="@drawable/call_audio_start"
+            app:cb_color="#cc0000" />
 
     </LinearLayout>
 

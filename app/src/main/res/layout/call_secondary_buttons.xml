@@ -33,7 +33,6 @@
                 android:id="@+id/video"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_switch_video"
                 android:padding="20dp"
                 android:src="@drawable/camera" />
@@ -53,9 +52,9 @@
             android:id="@+id/micro"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_toRightOf="@id/left_vertical_divider"
             android:layout_alignParentBottom="true"
-            android:background="?attr/button_background_drawable"
+            android:layout_toRightOf="@id/left_vertical_divider"
+
             android:contentDescription="@string/content_description_toggle_micro"
             android:padding="10dp"
             android:src="@drawable/micro" />
@@ -83,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_alignParentBottom="true"
-                android:background="?attr/button_background_drawable"
+
                 android:contentDescription="@string/content_description_toggle_speaker"
                 android:padding="15dp"
                 android:src="@drawable/speaker" />
@@ -144,7 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_alignParentBottom="true"
-                android:background="?attr/button_background_drawable"
+
                 android:contentDescription="@string/content_description_call_options"
                 android:padding="15dp"
                 android:src="@drawable/options" />
