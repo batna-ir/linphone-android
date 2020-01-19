@@ -622,5 +622,6 @@
     <string name="content_description_conversation_subject">موضوع اتاق چت</string>
     <string name="content_description_conversation_infos">اطلاعات اتاق چت گروهی</string>
     <string name="content_description_record_call">ظبط تماس</string>
+    <string name="username_too_long">نام کاربری خیلی کوتاه است</string>
 
 </resources>

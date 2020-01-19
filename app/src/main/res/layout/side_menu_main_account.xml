@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/default_account"
     android:layout_width="match_parent"
     android:layout_height="70dp"
@@ -19,11 +20,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layoutDirection="rtl"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <TextView
                 android:id="@+id/main_account_display_name"
                 style="@style/main_account_font"
+                android:layout_marginStart="5dp"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -31,7 +35,6 @@
                 android:id="@+id/main_account_status"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="7dp"
