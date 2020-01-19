@@ -25,10 +25,10 @@
     android:viewportHeight="1300"
     >
     <group
-        android:translateY="320"
-        android:translateX="320"
-        android:scaleX="1.3"
-        android:scaleY="1.3">
+        android:translateY="370"
+        android:translateX="370"
+        android:scaleX="1.1"
+        android:scaleY="1.1">
 
 
     <path
