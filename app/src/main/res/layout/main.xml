@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     android:background="?attr/backgroundColor">
 
     <fragment
@@ -71,6 +72,7 @@
                 android:id="@+id/footer"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layoutDirection="rtl"
                 android:layout_alignParentBottom="true"
                 android:orientation="horizontal">
 
@@ -204,7 +206,7 @@
         <!-- Side Menu -->
         <LinearLayout
             android:id="@+id/side_menu_content"
-            android:layout_width="match_parent"
+            android:layout_width="280dp"
             android:layout_height="match_parent"
             android:layout_gravity="right"
             >

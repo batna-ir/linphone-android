@@ -31,6 +31,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -44,6 +45,7 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import java.util.ArrayList;
+import java.util.Locale;
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
@@ -108,6 +110,13 @@ public abstract class MainActivity extends LinphoneGenericActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Locale locale = new Locale("fa");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext()
+                .getResources()
+                .updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
 
         setContentView(R.layout.main);
 
