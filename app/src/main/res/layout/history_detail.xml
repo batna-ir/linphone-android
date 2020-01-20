@@ -11,7 +11,7 @@
         <LinearLayout
             android:id="@+id/top_bar"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:background="?attr/lighToolbarBackgroundColor"
             android:orientation="horizontal">
 
@@ -22,7 +22,7 @@
                 android:layout_weight="0.2"
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_back"
-                android:padding="18dp"
+                android:padding="14dp"
                 android:src="@drawable/back" />
 
             <View
@@ -37,7 +37,7 @@
                 android:layout_weight="0.2"
                 android:background="?attr/button_background_drawable"
                 android:contentDescription="@string/content_description_add_contact"
-                android:padding="15dp"
+                android:padding="12dp"
                 android:src="@drawable/contact_add" />
 
             <ImageView

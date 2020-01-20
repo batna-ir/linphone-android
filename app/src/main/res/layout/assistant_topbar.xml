@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/topbar"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="40dp"
     android:layout_gravity="center_horizontal"
     android:background="?attr/lighToolbarBackgroundColor"
     android:orientation="horizontal">
@@ -14,7 +14,7 @@
         android:layout_weight="0.2"
         android:background="?attr/button_background_drawable"
         android:contentDescription="@string/content_description_back"
-        android:padding="18dp"
+        android:padding="11dp"
         android:src="@drawable/back" />
 
     <TextView
@@ -25,7 +25,7 @@
         android:gravity="center"
         android:singleLine="true"
         android:ellipsize="end"
-        android:padding="15dp"
+
         android:text="@string/assistant"/>
 
     <ImageView
@@ -33,7 +33,7 @@
         android:layout_height="match_parent"
         android:layout_weight="0.2"
         android:background="?attr/button_background_drawable"
-        android:padding="15dp"
+        android:padding="13dp"
         android:visibility="invisible"
         android:src="@drawable/valid" />
 
