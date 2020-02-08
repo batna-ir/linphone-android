@@ -70,6 +70,7 @@ import org.linphone.fragments.EmptyFragment;
 import org.linphone.fragments.StatusBarFragment;
 import org.linphone.history.HistoryActivity;
 import org.linphone.menu.SideMenuFragment;
+import org.linphone.service.LinphoneService;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.settings.SettingsActivity;
 import org.linphone.utils.DeviceUtils;
@@ -434,6 +435,10 @@ public abstract class MainActivity extends LinphoneGenericActivity
 
     private void quit() {
         goHomeAndClearStack();
+        if (LinphoneService.isReady()
+                && LinphonePreferences.instance().getServiceNotificationVisibility()) {
+            LinphoneService.instance().stopSelf();
+        }
     }
 
     // Tab, Top and Status bars
@@ -635,6 +640,18 @@ public abstract class MainActivity extends LinphoneGenericActivity
             startActivity(new Intent(this, CallOutgoingActivity.class));
         } else {
             startActivity(new Intent(this, CallActivity.class));
+        }
+    }
+
+    public void newOutgoingCall(String to) {
+        if (LinphoneManager.getCore().getCallsNb() > 0) {
+            Intent intent = new Intent(this, DialerActivity.class);
+            intent.addFlags(
+                    Intent.FLAG_ACTIVITY_NO_ANIMATION | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+            intent.putExtra("SipUri", to);
+            this.startActivity(intent);
+        } else {
+            LinphoneManager.getCallManager().newOutgoingCall(to, null);
         }
     }
 
