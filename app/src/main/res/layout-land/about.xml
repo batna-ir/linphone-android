@@ -41,13 +41,7 @@
                     android:text="@string/app_name"
                     android:visibility="gone" />
 
-                <TextView
-                    android:textSize="13sp"
-                    android:textColor="?accentColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/app_description" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -65,13 +59,6 @@
                     android:layout_gravity="left"
                     android:text="@string/about_version" />
 
-                <TextView
-                    android:id="@+id/about_liblinphone_sdk_version"
-                    style="@style/about_version_font"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="@string/about_liblinphone_sdk_version" />
 
             </LinearLayout>
 
@@ -87,17 +74,6 @@
             android:padding="10dp">
 
             <TextView
-                android:id="@+id/about_link"
-                style="@style/link_font"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:autoLink="web"
-                android:gravity="center"
-                android:text="@string/about_link"
-                android:textColorLink="@color/primary_color" />
-
-            <TextView
                 android:id="@+id/privacy_policy_link"
                 style="@style/about_license_font"
                 android:layout_width="wrap_content"
@@ -110,15 +86,17 @@
                 android:textColorLink="@color/primary_color"/>
 
             <TextView
-                android:id="@+id/about_text"
-                style="@style/about_license_font"
-                android:layout_width="match_parent"
+                android:id="@+id/about_link"
+                style="@style/link_font"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:autoLink="web"
                 android:gravity="center"
-                android:paddingTop="10dp"
-                android:paddingBottom="20dp"
-                android:text="@string/about_text" />
+                android:text="@string/about_link"
+                android:textColorLink="@color/primary_color" />
+
+
 
             <View
                 android:layout_width="match_parent"

@@ -93,7 +93,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 4216
-        versionName "${project.version}"
+        versionName "Bahman98-A"
         applicationId getPackageName()
         multiDexEnabled true
     }

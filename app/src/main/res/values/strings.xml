@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Custom -->
-    <string name="app_name">سبا تاک</string>
-    <string name="service_name">سرویس سبا</string>
-    <string name="addressbook_label">سبا تاک</string>
-    <string name="notification_title">سبا تاک</string>
+    <string name="app_name">تاک</string>
+    <string name="service_name">سرویس تاک </string>
+    <string name="addressbook_label"> تاک</string>
+    <string name="notification_title"> تاک</string>
     <string name="wait_dialog_text">Starting up</string>
     <string name="notification_registered">%s اتصال برقرار شده</string>
     <string name="notification_register_failure">%s اتصال برقرار نشد</string>
     <string name="tunnel_host" />
-    <string name="about_version">سبا تاک %s</string>
-    <string name="about_liblinphone_version">هسته سبا تاک %s</string>
-    <string name="about_liblinphone_sdk_version">سبا تاک SDK %s</string>
+    <string name="about_version"> تاک %s</string>
+    <string name="about_liblinphone_version">هسته  تاک %s</string>
+    <string name="about_liblinphone_sdk_version"> تاک SDK %s</string>
     <string name="about_privacy_policy">مشاهده سیاست حفظ حریم خصوصی</string>
-    <string name="sync_account_name">مخاطبین سبا تاک</string>
+    <string name="sync_account_name">مخاطبین  تاک</string>
 
     <!-- Notifications -->
     <string name="notification_reply_label">پاسخ</string>
@@ -79,20 +79,20 @@
     <string name="assistant_validate_account_1">حساب شما ایجاد شده است، لطفاً ایمیل خود را بررسی کنید تا اعتبار خود را تأیید کنید:</string>
     <string name="assistant_validate_account_2">پس از اتمام کار، به اینجا بازگردید و بر روی دکمه کلیک کنید.</string>
     <string name="assistant_welcome_desc">این دستیار به شما در پیکربندی و استفاده از حساب SIP کمک می کند.</string>
-    <string name="assistant_linphone_login_desc">لطفاً نام کاربری و رمز ورود حساب سبا تاک را وارد کنید</string>
+    <string name="assistant_linphone_login_desc">لطفاً نام کاربری و رمز ورود حساب تاک را وارد کنید</string>
     <string name="assistant_login_desc">لطفاً نام کاربری و رمز عبور خود را با دامنه SIP وارد کنید</string>
     <string name="assistant_remote_provisioning_desc">لطفا تامین کننده URL خود را ارائه دهید</string>
     <string name="transport">انتقال</string>
     <string name="assistant_create_account_phone_number_address">آدرس SIP شما هست</string>
-    <string name="assistant_login_linphone">از حساب سبا تاک استفاده کنید</string>
+    <string name="assistant_login_linphone">از حساب  تاک استفاده کنید</string>
     <string name="assistant_login_generic">از حساب SIP استفاده کنید</string>
     <string name="assistant_remote_provisioning">واکشی پیکربندی از راه دور</string>
     <string name="assistant_create_account_part_1">لطفاً کد کشور خود را تأیید کرده و شماره تلفن خود را وارد کنید</string>
     <string name="assistant_create_account_part_2">ما برای شماپیامک با کد اعتبار سنجی ارسال کرده ایم:</string>
     <string name="assistant_create_account_part_3">برای تأیید شماره تلفن، لطفاً کد 4 رقمی زیر را وارد کنید: \n</string>
-    <string name="assistant_create_account_part_email">لطفاً یک نام کاربری، ایمیل و گذرواژه برای حساب سبا تاک خود وارد کنید</string>
+    <string name="assistant_create_account_part_email">لطفاً یک نام کاربری، ایمیل و گذرواژه برای حساب  تاک خود وارد کنید</string>
     <string name="assistant_display_name_optional">نمایش نام (اختیاری)</string>
-    <string name="assistant_linphone_account">از حساب سبا تاک خود استفاده کنید</string>
+    <string name="assistant_linphone_account">از حساب تاک خود استفاده کنید</string>
     <string name="assistant_generic_account">از حساب SIP استفاده کنید</string>
     <string name="assistant_remote_provisioning_title">واکشی پیکربندی از راه دور</string>
     <string name="assistant_fetch_apply">واکشی و اعمال</string>
@@ -129,9 +129,9 @@
     <string name="use_email_for_validation">برای اعتبار سنجی حساب از آدرس ایمیل استفاده کنید</string>
     <string name="login_with_username">به جای شماره تلفن خود از نام کاربری و رمز عبور خود استفاده کنید</string>
     <string name="phone_number_info_title">شماره تلفن من برای چه مواردی استفاده خواهد شد؟</string>
-    <string name="phone_number_info_content">\nبه لطف شماره تلفن شما ، دوستانتان راحت تر شما را پیدا می کنند.\n\n در کتاب آدرس خود مشاهده خواهید کرد که از سبا تاک استفاده می کند و دوستانتان خواهند دانست که آنها نیز میتوانند شما را در سباتاک بیابند </string>
-    <string name="phone_number_link_info_content">\nبه لطف شماره تلفن شما ، دوستانتان راحت تر شما را پیدا می کنند.\n\n در کتاب آدرس خود مشاهده خواهید کرد که از سبا تاک استفاده می کند و دوستانتان خواهند دانست که آنها نیز میتوانند شما را در سباتاک بیابند </string>
-    <string name="phone_number_link_info_content_already_account">فقط می توانید شماره تلفن خود را با یک حساب سبا تاک استفاده کنید n\n\ اگر قبلاً شماره خود را به یک حساب دیگر پیوند داده اید اما ترجیح می دهید از این شماره استفاده کنید ، همین حالا آن را پیوند دهید، شماره شما به طور خودکار به این حساب منتقل می شود.</string>
+    <string name="phone_number_info_content">\nبه لطف شماره تلفن شما ، دوستانتان راحت تر شما را پیدا می کنند.\n\n در کتاب آدرس خود مشاهده خواهید کرد که از  تاک استفاده می کند و دوستانتان خواهند دانست که آنها نیز میتوانند شما را در تاک بیابند </string>
+    <string name="phone_number_link_info_content">\nبه لطف شماره تلفن شما ، دوستانتان راحت تر شما را پیدا می کنند.\n\n در کتاب آدرس خود مشاهده خواهید کرد که از تاک استفاده می کند و دوستانتان خواهند دانست که آنها نیز میتوانند شما را در تاک بیابند </string>
+    <string name="phone_number_link_info_content_already_account">فقط می توانید شماره تلفن خود را با یک حساب  تاک استفاده کنید n\n\ اگر قبلاً شماره خود را به یک حساب دیگر پیوند داده اید اما ترجیح می دهید از این شماره استفاده کنید ، همین حالا آن را پیوند دهید، شماره شما به طور خودکار به این حساب منتقل می شود.</string>
     <string name="phone_number_overuse">در مدت زمان کوتاه پیامک های زیادی به این شماره ارسال شده است، در 24 ساعت دوباره امتحان کنید.</string>
     <string name="account_doesnt_exist">اکانت\'t موجود نیست</string>
 
@@ -183,7 +183,7 @@
     <string name="contact_last_name">نام خانوادگی</string>
     <string name="contact_organization">سازمان</string>
     <string name="invite_friend">دعوت</string>
-    <string name="invite_friend_text">سلام ، به من در سبا تاک بپیوندید! می توانید آن را به صورت رایگان در اینجا بارگیری کنید %s</string>
+    <string name="invite_friend_text">سلام ، به من در تاک بپیوندید! می توانید آن را به صورت رایگان در اینجا بارگیری کنید %s</string>
     <string name="toast_choose_contact_for_edition">مخاطبی را انتخاب کنید یا یک شماره جدید ایجاد کنید</string>
 
     <!-- Chat -->
@@ -462,7 +462,7 @@
 
     <!-- Contact settings -->
     <string name="pref_contact_sync_title">اطلاعات مربوط به حضور در تماس های بومی</string>
-    <string name="pref_contact_sync_subtitle">درج میانبرهای اطلاعات از مخاطبین سبا تاک به مخاطبین بومی Android</string>
+    <string name="pref_contact_sync_subtitle">درج میانبرهای اطلاعات از مخاطبین تاک به مخاطبین بومی Android</string>
     <string name="pref_contact_title">مخاطبین</string>
     <string name="pref_contact_display_contact_organization_title">سازماندهی نمایش مخاطبین</string>
     <string name="pref_create_contact_shortcuts">میانبرها را صفحه نمایش ایجاد کنید</string>
@@ -477,7 +477,7 @@
     <string name="pref_sipinfo_dtmf">ارسال خارج از باند DTMF</string>
     <string name="pref_call_timeout_title">مدت زمان مکالمه (در ثانیه)</string>
     <string name="pref_voice_mail">URI پست صوتی</string>
-    <string name="pref_dialer_call">از سبا تاک به عنوان برنامه پیش فرض استفاده کنید</string>
+    <string name="pref_dialer_call">از تاک به عنوان برنامه پیش فرض استفاده کنید</string>
     <string name="pref_accept_early_media">پذیرش رسانه ها</string>
     <string name="pref_grant_read_dnd_settings_permission_title">تنظیمات مزاحمت</string>
     <string name="pref_grant_read_dnd_settings_permission_desc">ما نیاز داریم تا به ما دسترسی به تنظیمات Do Not Disturb را بدهید تا گوشی بر اساس سیاست کنونی زنگ بخورد</string>
@@ -491,7 +491,7 @@
     <string name="lime_encryption_entry_disabled">غیرفعال</string>
     <string name="lime_encryption_entry_mandatory">الزامی</string>
     <string name="lime_encryption_entry_preferred">ترجیحی</string>
-    <string name="lime_encryption_enable_zrtp">برای ZRTPبه رمزگذاری LIMEنیاز است.n\ با فعال کردن LIME به طور خودکار رمزگذاری رسانه ZRTP فعال می شود.</string>
+    <string name="lime_encryption_enable_zrtp" translatable="false">برای ZRTPبه رمزگذاری LIMEنیاز است.n\ با فعال کردن LIME به طور خودکار رمزگذاری رسانه ZRTP فعال می شود.</string>
     <string name="pref_auto_download_policy_title">بارگیری خودکار فایل های دریافتی</string>
     <string name="pref_auto_download_max_size_title">حداکثر اندازه (در واحد بایت)</string>
     <string name="pref_auto_download_disabled">هرگز</string>
@@ -534,7 +534,7 @@
     <string name="pref_friendlist_subscribe">اشتراک در لیست دوستان</string>
     <string name="pref_background_mode">حالت پس زمینه</string>
     <string name="pref_background_mode_desc">یک اعلان را برای فعال نگه داشتن برنامه نشان دهید</string>
-    <string name="pref_background_mode_warning_desc">سبا تاک برای استفاده در پس زمینه محدود شده است، لطفاً ابتدا محدودیت را بردارید</string>
+    <string name="pref_background_mode_warning_desc"> تاک برای استفاده در پس زمینه محدود شده است، لطفاً ابتدا محدودیت را بردارید</string>
     <string name="pref_animation_enable_title">فعال کردن انیمیشن ها</string>
     <string name="pref_service_notification">فعال سازی اعلان خدمات</string>
     <string name="pref_autostart"> شروع از زمان بوت</string>
@@ -598,7 +598,7 @@
     <string name="content_description_search_contact">جستجوی مخاطب</string>
     <string name="content_description_search_country">جستجوی کشور</string>
     <string name="content_description_all_contacts">همه مخاطبین</string>
-    <string name="content_description_linphone_contacts">مخاطبین سبا تاک</string>
+    <string name="content_description_linphone_contacts">مخاطبین تاک</string>
     <string name="content_description_call_direction">جهت تماس</string>
     <string name="content_description_all_calls">همه تماس ها</string>
     <string name="content_description_missed_calls">تماس های از دست رفته</string>
@@ -641,7 +641,7 @@
     <string name="content_description_call_options">تنظیمات تماس</string>
     <string name="content_description_audio_route">مسیر صوتی</string>
     <string name="content_description_exit_conference">خروج از کنفرانس</string>
-    <string name="content_title_notification_service">سرویس اعلان سبا تاک</string>
+    <string name="content_title_notification_service">سرویس اعلان تاک</string>
     <string name="content_title_notification">اعلان های پیام فوری</string>
     <string name="content_description_conversation_subject">موضوع اتاق چت</string>
     <string name="content_description_conversation_infos">اطلاعات اتاق چت گروهی</string>
