@@ -377,7 +377,7 @@
     <string name="pref_domain">دامنه*</string>
     <string name="pref_passwd">گذرواژه*</string>
     <string name="pref_username">نام کاربری*</string>
-    <string name="pref_enable_outbound_proxy">پروکسی خارج از کشور</string>
+    <string name="pref_enable_outbound_proxy">پروکسی بیرونی</string>
     <string name="pref_help_proxy">نام میزبان پروکسی SIP یا آدرس IP (اختیاری)</string>
     <string name="pref_help_outbound_proxy">مسیریابی همه تماس ها از طریق پروکسی SIP</string>
     <string name="pref_help_username">مثال: اگر حساب شماjohn@sip.example.orgباشد</string>
@@ -492,7 +492,7 @@
     <string name="lime_encryption_entry_mandatory">الزامی</string>
     <string name="lime_encryption_entry_preferred">ترجیحی</string>
     <string name="lime_encryption_enable_zrtp">برای ZRTPبه رمزگذاری LIMEنیاز است.n\ با فعال کردن LIME به طور خودکار رمزگذاری رسانه ZRTP فعال می شود.</string>
-    <string name="pref_auto_download_policy_title">خط مشی پرونده های دریافتی بارگیری خودکار</string>
+    <string name="pref_auto_download_policy_title">بارگیری خودکار فایل های دریافتی</string>
     <string name="pref_auto_download_max_size_title">حداکثر اندازه (در واحد بایت)</string>
     <string name="pref_auto_download_disabled">هرگز</string>
     <string name="pref_auto_download_always">همیشه</string>
