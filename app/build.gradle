@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 static def getPackageName() {
-    return "ir.batna"
+    return "org.linphone"
 }
 
 static def firebaseEnabled() {
@@ -92,7 +92,7 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 9811231
+        versionCode 4213
         versionName "${project.version}"
         applicationId getPackageName()
         multiDexEnabled true
@@ -131,6 +131,8 @@ android {
         flavorDimensions "free"
         batna{
             applicationId "ir.batna.talk"
+            versionCode 9811231
+            versionName "Bahman98-A"
             dimension "free"
         }
         generic{

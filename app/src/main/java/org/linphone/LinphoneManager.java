@@ -807,7 +807,7 @@ public class LinphoneManager implements SensorEventListener {
             int interval =
                     mContext.getResources().getInteger(R.integer.time_between_update_check); // 24h
             if (lastTimestamp == 0 || currentTimeStamp - lastTimestamp >= interval) {
-                mCore.checkForUpdate(BuildConfig.VERSION_NAME);
+                //                mCore.checkForUpdate(BuildConfig.VERSION_NAME);
                 LinphonePreferences.instance().setLastCheckReleaseTimestamp(currentTimeStamp);
             }
         }
