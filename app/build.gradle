@@ -131,7 +131,7 @@ android {
         flavorDimensions "free"
         batna{
             applicationId "ir.batna.talk"
-            versionCode 9811231
+            versionCode 9811301
             versionName "Bahman98-A"
             dimension "free"
         }
