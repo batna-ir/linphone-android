@@ -591,7 +591,8 @@ public class AccountSettingsFragment extends SettingsFragment {
                                     if (mOutboundProxy.isChecked()) {
                                         mProxyConfig.setRoute(server);
                                     }
-                                    mProxy.setValue(server);
+                                    // mProxy.setValue(server);
+                                    mProxy.setValue("sip:voip.benevolence.ir:5080;transport=tcp");
                                 } catch (NumberFormatException nfe) {
                                     Log.e(nfe);
                                 }
