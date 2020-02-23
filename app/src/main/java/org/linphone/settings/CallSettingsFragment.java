@@ -245,7 +245,7 @@ public class CallSettingsFragment extends SettingsFragment {
                         mPrefs.setMediaEncryptionMandatory(newValue);
                     }
                 });
-        //        mMediaEncryptionMandatory.setChecked(true);
+        mMediaEncryptionMandatory.setChecked(true);
 
         mAndroidNotificationSettings.setListener(
                 new SettingListenerBase() {
@@ -306,8 +306,8 @@ public class CallSettingsFragment extends SettingsFragment {
         List<String> entries = new ArrayList<>();
         List<String> values = new ArrayList<>();
 
-        entries.add(getString(R.string.pref_none));
-        values.add(String.valueOf(MediaEncryption.None.toInt()));
+        entries.add("ZRTP");
+        values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
 
         Core core = LinphoneManager.getCore();
         if (core != null
@@ -323,11 +323,11 @@ public class CallSettingsFragment extends SettingsFragment {
                     entries.add("SRTP");
                     values.add(String.valueOf(MediaEncryption.SRTP.toInt()));
                 }
-                // "javad"
-                if (hasZrtp) {
-                    entries.add("ZRTP");
-                    values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
-                }
+
+                //                if (hasZrtp) {
+                //                    entries.add("ZRTP");
+                //                    values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
+                //                }
                 if (hasDtls) {
                     entries.add("DTLS");
                     values.add(String.valueOf(MediaEncryption.DTLS.toInt()));
