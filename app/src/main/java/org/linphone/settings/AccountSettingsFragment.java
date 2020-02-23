@@ -81,7 +81,7 @@ public class AccountSettingsFragment extends SettingsFragment {
         mRootView = inflater.inflate(R.layout.settings_account, container, false);
 
         loadSettings();
-
+        //        mDomain.setValue("voip.benevolence.ir");
         mIsNewlyCreatedAccount = true;
         mAccountIndex = getArguments().getInt("Account", -1);
         if (mAccountIndex == -1 && savedInstanceState != null) {
@@ -637,7 +637,8 @@ public class AccountSettingsFragment extends SettingsFragment {
 
             mUsername.setValue(identityAddress.getUsername());
 
-            mDomain.setValue(identityAddress.getDomain());
+            //            mDomain.setValue(identityAddress.getDomain());
+            //            mDomain.setValue("voip.benevolence.ir");
 
             mDisplayName.setValue(identityAddress.getDisplayName());
 
@@ -647,7 +648,8 @@ public class AccountSettingsFragment extends SettingsFragment {
 
             mExpire.setValue(mProxyConfig.getExpires());
 
-            mPrefix.setValue(mProxyConfig.getDialPrefix());
+            //            mPrefix.setValue(mProxyConfig.getDialPrefix());
+            //            mPrefix.setValue("");
 
             mAvpfInterval.setValue(mProxyConfig.getAvpfRrInterval());
             mAvpfInterval.setEnabled(mProxyConfig.avpfEnabled());

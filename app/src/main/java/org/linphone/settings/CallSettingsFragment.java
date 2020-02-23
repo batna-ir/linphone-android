@@ -245,6 +245,7 @@ public class CallSettingsFragment extends SettingsFragment {
                         mPrefs.setMediaEncryptionMandatory(newValue);
                     }
                 });
+        //        mMediaEncryptionMandatory.setChecked(true);
 
         mAndroidNotificationSettings.setListener(
                 new SettingListenerBase() {
@@ -322,6 +323,7 @@ public class CallSettingsFragment extends SettingsFragment {
                     entries.add("SRTP");
                     values.add(String.valueOf(MediaEncryption.SRTP.toInt()));
                 }
+                // "javad"
                 if (hasZrtp) {
                     entries.add("ZRTP");
                     values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
