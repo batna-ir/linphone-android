@@ -25,11 +25,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import org.linphone.R;
 import org.linphone.core.AccountCreator;
 import org.linphone.core.AccountCreatorListenerStub;
 import org.linphone.core.tools.Log;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class EmailAccountValidationAssistantActivity extends AssistantActivity {
     private TextView mFinishCreation;
@@ -38,7 +38,7 @@ public class EmailAccountValidationAssistantActivity extends AssistantActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

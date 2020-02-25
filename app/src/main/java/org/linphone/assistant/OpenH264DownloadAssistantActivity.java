@@ -25,6 +25,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Core;
@@ -34,7 +35,6 @@ import org.linphone.core.tools.Log;
 import org.linphone.core.tools.OpenH264DownloadHelper;
 import org.linphone.core.tools.OpenH264DownloadHelperListener;
 import org.linphone.settings.LinphonePreferences;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class OpenH264DownloadAssistantActivity extends AssistantActivity {
     private TextView mYes, mNo;
@@ -45,7 +45,7 @@ public class OpenH264DownloadAssistantActivity extends AssistantActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

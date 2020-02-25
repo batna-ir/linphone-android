@@ -28,13 +28,13 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.AccountCreator;
 import org.linphone.core.Core;
 import org.linphone.core.TransportType;
 import org.linphone.core.tools.Log;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class GenericConnectionAssistantActivity extends AssistantActivity implements TextWatcher {
     private TextView mLogin;
@@ -43,7 +43,7 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

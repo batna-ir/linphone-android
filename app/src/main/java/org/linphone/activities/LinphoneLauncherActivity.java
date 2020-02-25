@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.assistant.MenuAssistantActivity;
@@ -35,13 +36,12 @@ import org.linphone.service.LinphoneService;
 import org.linphone.service.ServiceWaitThread;
 import org.linphone.service.ServiceWaitThreadListener;
 import org.linphone.settings.LinphonePreferences;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /** Creates LinphoneService and wait until Core is ready to start main Activity */
 public class LinphoneLauncherActivity extends Activity implements ServiceWaitThreadListener {
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

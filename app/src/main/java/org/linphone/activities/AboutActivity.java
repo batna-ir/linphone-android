@@ -34,12 +34,12 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
 import org.linphone.settings.LinphonePreferences;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AboutActivity extends MainActivity {
     private CoreListenerStub mListener;
@@ -48,7 +48,7 @@ public class AboutActivity extends MainActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

@@ -32,6 +32,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import java.util.ArrayList;
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
@@ -52,7 +53,6 @@ import org.linphone.core.CoreListenerStub;
 import org.linphone.core.tools.Log;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.utils.LinphoneUtils;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CallIncomingActivity extends LinphoneGenericActivity {
     private TextView mName, mNumber;
@@ -63,7 +63,7 @@ public class CallIncomingActivity extends LinphoneGenericActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

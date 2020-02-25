@@ -28,6 +28,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import java.util.Locale;
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
@@ -41,7 +42,6 @@ import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
 import org.linphone.dialer.DialerActivity;
 import org.linphone.settings.LinphonePreferences;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public abstract class AssistantActivity extends LinphoneGenericActivity
         implements CountryPicker.CountryPickedListener {
@@ -52,7 +52,7 @@ public abstract class AssistantActivity extends LinphoneGenericActivity
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

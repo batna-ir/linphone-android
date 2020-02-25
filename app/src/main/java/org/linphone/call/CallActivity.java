@@ -50,6 +50,7 @@ import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import org.linphone.LinphoneManager;
@@ -73,7 +74,6 @@ import org.linphone.dialer.DialerActivity;
 import org.linphone.service.LinphoneService;
 import org.linphone.settings.LinphonePreferences;
 import org.linphone.utils.LinphoneUtils;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class CallActivity extends LinphoneGenericActivity
         implements CallStatusBarFragment.StatsClikedListener,
@@ -134,7 +134,7 @@ public class CallActivity extends LinphoneGenericActivity
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)

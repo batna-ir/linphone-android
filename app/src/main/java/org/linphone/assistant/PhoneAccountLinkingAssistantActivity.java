@@ -30,6 +30,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.AccountCreator;
@@ -40,7 +41,6 @@ import org.linphone.core.Core;
 import org.linphone.core.DialPlan;
 import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class PhoneAccountLinkingAssistantActivity extends AssistantActivity {
     private TextView mCountryPicker, mError, mLink;
@@ -50,7 +50,7 @@ public class PhoneAccountLinkingAssistantActivity extends AssistantActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

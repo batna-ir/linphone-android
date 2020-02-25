@@ -27,12 +27,12 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.ImageView;
 import androidx.annotation.Nullable;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
 import org.linphone.core.tools.Log;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class QrCodeConfigurationAssistantActivity extends AssistantActivity {
     private TextureView mQrcodeView;
@@ -41,7 +41,7 @@ public class QrCodeConfigurationAssistantActivity extends AssistantActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

@@ -26,14 +26,14 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import org.linphone.R;
 import org.linphone.settings.LinphonePreferences;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MenuAssistantActivity extends AssistantActivity {
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override

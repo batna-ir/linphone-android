@@ -31,6 +31,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -41,8 +42,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import java.util.ArrayList;
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
@@ -75,7 +78,6 @@ import org.linphone.settings.LinphonePreferences;
 import org.linphone.settings.SettingsActivity;
 import org.linphone.utils.DeviceUtils;
 import org.linphone.utils.LinphoneUtils;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public abstract class MainActivity extends LinphoneGenericActivity
         implements StatusBarFragment.MenuClikedListener, SideMenuFragment.QuitClikedListener {
@@ -103,7 +105,7 @@ public abstract class MainActivity extends LinphoneGenericActivity
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
     }
 
     @Override
@@ -371,6 +373,7 @@ public abstract class MainActivity extends LinphoneGenericActivity
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onMenuCliked() {
         if (mSideMenuFragment.isOpened()) {
