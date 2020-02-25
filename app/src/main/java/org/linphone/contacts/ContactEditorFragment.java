@@ -676,8 +676,10 @@ public class ContactEditorFragment extends Fragment {
             final LinearLayout controls, final boolean isSip) {
         final View view = mInflater.inflate(R.layout.contact_edit_cell, null);
         final LinphoneNumberOrAddress nounoa = new LinphoneNumberOrAddress(null, isSip);
+        view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
 
         final EditText noa = view.findViewById(R.id.numoraddr);
+        noa.setTextDirection(View.TEXT_DIRECTION_ANY_RTL);
         mNumbersAndAddresses.add(nounoa);
         noa.setHint(isSip ? getString(R.string.sip_address) : getString(R.string.phone_number));
         if (!isSip) {

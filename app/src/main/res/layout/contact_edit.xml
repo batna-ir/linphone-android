@@ -55,6 +55,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
             android:orientation="vertical">
 
             <LinearLayout
@@ -149,11 +150,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layoutDirection="rtl"
                 android:padding="10dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
+                    android:layoutDirection="rtl"
                     android:layout_gravity="center">
 
                     <TextView
@@ -168,7 +171,7 @@
                         android:id="@+id/add_address_field"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentLeft="true"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/round_orange_button_background"
                         android:contentDescription="@string/content_description_add"
@@ -178,6 +181,7 @@
                 <LinearLayout
                     android:id="@+id/controls_sip_address"
                     android:layout_width="match_parent"
+                    android:layoutDirection="rtl"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -195,6 +199,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
+                    android:layoutDirection="rtl"
                     android:layout_gravity="center">
 
                     <TextView
@@ -209,7 +214,7 @@
                         android:id="@+id/add_number_field"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentLeft="true"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/round_orange_button_background"
                         android:contentDescription="@string/content_description_add"
@@ -219,6 +224,7 @@
                 <LinearLayout
                     android:id="@+id/controls_numbers"
                     android:layout_width="match_parent"
+                    android:layoutDirection="rtl"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
