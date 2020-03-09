@@ -113,6 +113,9 @@ public abstract class MainActivity extends LinphoneGenericActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        // First startup
+        // Sentry.captureMessage("Startup");
+
         mOnBackPressGoHome = true;
         mAlwaysHideTabBar = false;
 

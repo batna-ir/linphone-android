@@ -69,6 +69,8 @@
         android:supportsRtl="true"
         android:requestLegacyExternalStorage="true">
 
+        <meta-data android:name="io.sentry.dsn" android:value="https://6dca3c15003146cea1e49637d06549b5@sentry.ir-cloud.ir/11" />
+
         <!-- Starting activities -->
 
         <activity

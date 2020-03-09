@@ -131,8 +131,8 @@ android {
         flavorDimensions "free"
         batna{
             applicationId "ir.batna.talk"
-            versionCode 9811301
-            versionName "Bahman98-A"
+            versionCode 9812191
+            versionName "Esfand98-A"
             dimension "free"
         }
         generic{
@@ -184,6 +184,11 @@ android {
         pickFirst 'META-INF/LICENSE'
         exclude 'META-INF/MANIFEST.MF'
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -201,6 +206,7 @@ dependencies {
         implementation 'io.github.inflationx:viewpump:2.0.3'
     }
 
+    implementation 'io.sentry:sentry-android:2.0.2'
 
     if (isLocalAarAvailable()) {
         if (isLocalReleaseAarAvailable()) {
