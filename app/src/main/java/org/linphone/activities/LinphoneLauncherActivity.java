@@ -25,8 +25,10 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
+import org.linphone.BuildConfig;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
+import org.linphone.assistant.GenericConnectionAssistantActivity;
 import org.linphone.assistant.MenuAssistantActivity;
 import org.linphone.chat.ChatActivity;
 import org.linphone.contacts.ContactsActivity;
@@ -77,7 +79,11 @@ public class LinphoneLauncherActivity extends Activity implements ServiceWaitThr
         boolean useFirstLoginActivity =
                 getResources().getBoolean(R.bool.display_account_assistant_at_first_start);
         if (useFirstLoginActivity && LinphonePreferences.instance().isFirstLaunch()) {
-            classToStart = MenuAssistantActivity.class;
+            if (BuildConfig.IS_BATNA) {
+                classToStart = GenericConnectionAssistantActivity.class;
+            } else {
+                classToStart = MenuAssistantActivity.class;
+            }
         } else {
             if (getIntent().getExtras() != null) {
                 String activity = getIntent().getExtras().getString("Activity", null);
