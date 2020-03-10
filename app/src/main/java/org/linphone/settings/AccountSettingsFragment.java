@@ -28,6 +28,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import org.linphone.BuildConfig;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.assistant.PhoneAccountLinkingAssistantActivity;
@@ -376,6 +377,7 @@ public class AccountSettingsFragment extends SettingsFragment {
                 new SettingListenerBase() {
                     @Override
                     public void onTextValueChanged(String newValue) {
+                        if (BuildConfig.IS_BATNA) return;
                         if (mProxyConfig != null) {
                             mProxyConfig.edit();
                             mProxyConfig.setDialPrefix(newValue);
