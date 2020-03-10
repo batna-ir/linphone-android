@@ -39,11 +39,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import java.util.ArrayList;
 import java.util.List;
+import org.linphone.BuildConfig;
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.activities.AboutActivity;
 import org.linphone.activities.MainActivity;
+import org.linphone.assistant.GenericConnectionAssistantActivity;
 import org.linphone.assistant.MenuAssistantActivity;
 import org.linphone.core.Core;
 import org.linphone.core.ProxyConfig;
@@ -129,6 +131,13 @@ public class SideMenuFragment extends Fragment {
                         } else if (selectedItem.equals(getString(R.string.menu_about))) {
                             startActivity(new Intent(getActivity(), AboutActivity.class));
                         } else if (selectedItem.equals(getString(R.string.menu_assistant))) {
+                            if (BuildConfig.IS_BATNA) {
+                                startActivity(
+                                        new Intent(
+                                                getActivity(),
+                                                GenericConnectionAssistantActivity.class));
+                                return;
+                            }
                             startActivity(new Intent(getActivity(), MenuAssistantActivity.class));
                         } else if (selectedItem.equals(getString(R.string.menu_recordings))) {
                             startActivity(new Intent(getActivity(), RecordingsActivity.class));
