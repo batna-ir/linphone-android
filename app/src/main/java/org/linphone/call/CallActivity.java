@@ -53,6 +53,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import org.linphone.BuildConfig;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.activities.LinphoneGenericActivity;
@@ -374,8 +375,10 @@ public class CallActivity extends LinphoneGenericActivity
 
         DrawerLayout sideMenu = findViewById(R.id.side_menu);
         LinearLayout sideMenuContent = findViewById(R.id.side_menu_content);
-        sideMenuContent.setForegroundGravity(View.TEXT_DIRECTION_LOCALE);
-        sideMenuContent.setForegroundGravity(View.LAYOUT_DIRECTION_LOCALE);
+        if (!BuildConfig.IS_BATNA) {
+            sideMenuContent.setForegroundGravity(View.TEXT_DIRECTION_LOCALE);
+            sideMenuContent.setForegroundGravity(View.LAYOUT_DIRECTION_LOCALE);
+        }
         sideMenuContent.setGravity(View.LAYOUT_DIRECTION_LOCALE);
         sideMenuContent.setGravity(View.TEXT_DIRECTION_LOCALE);
         mStatsFragment =
