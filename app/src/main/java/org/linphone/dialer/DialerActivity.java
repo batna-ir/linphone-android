@@ -35,6 +35,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Collection;
+import org.linphone.BuildConfig;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.activities.MainActivity;
@@ -44,6 +45,7 @@ import org.linphone.contacts.ContactsManager;
 import org.linphone.core.Call;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
+import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
 import org.linphone.dialer.views.AddressText;
 import org.linphone.dialer.views.Digit;
@@ -65,7 +67,6 @@ public class DialerActivity extends MainActivity implements AddressText.AddressC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mInterfaceLoaded = false;
         // Uses the fragment container layout to inflate the dialer view instead of using a fragment
         new AsyncLayoutInflater(this)
@@ -152,6 +153,19 @@ public class DialerActivity extends MainActivity implements AddressText.AddressC
         if (mInterfaceLoaded) {
             updateLayout();
             enableVideoPreviewIfTablet(true);
+        }
+        if (BuildConfig.IS_BATNA) {
+            // This piece of code helps avoid prepending country code to outgoing number(call)
+            ProxyConfig mProxyConfig = null;
+            ProxyConfig[] proxyConfigs = core.getProxyConfigList();
+            for (int i = 0; i < proxyConfigs.length; i++) {
+                if (proxyConfigs[i] != null) {
+                    mProxyConfig = proxyConfigs[i];
+                }
+            }
+            mProxyConfig.edit();
+            mProxyConfig.setDialPrefix("");
+            mProxyConfig.done();
         }
     }
 
