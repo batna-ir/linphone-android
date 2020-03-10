@@ -134,9 +134,11 @@ android {
             versionCode 9812191
             versionName "Esfand98-A"
             dimension "free"
+            buildConfigField "boolean", "IS_BATNA", "true"
         }
         generic{
             dimension "free"
+            buildConfigField "boolean", "IS_BATNA", "false"
         }
     }
 
