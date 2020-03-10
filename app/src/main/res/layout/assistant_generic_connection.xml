@@ -76,7 +76,8 @@
                         android:inputType="text|textNoSuggestions"
                         android:maxLines="1"
                         android:hint="@string/username"
-                        android:textColor="@color/black_color" />
+                        android:textColor="@color/black_color"
+                        android:layoutDirection="ltr"/>
 
                 </LinearLayout>
 
