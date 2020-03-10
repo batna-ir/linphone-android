@@ -25,6 +25,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.EditText;
+import org.linphone.BuildConfig;
 import org.linphone.R;
 
 @SuppressLint("AppCompatCustomView")
@@ -100,10 +101,11 @@ public class AddressText extends EditText implements AddressType {
             }
         }
 
-        return 130;
+        return lo;
     }
 
     private void refitText(int textWidth, int textHeight) {
+        if (BuildConfig.IS_BATNA) return;
         if (textWidth <= 0) {
             return;
         }

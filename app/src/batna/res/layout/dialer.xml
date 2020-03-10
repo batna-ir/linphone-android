@@ -28,7 +28,8 @@
             android:textAlignment="center"
             android:textColorHint="@color/light_grey_color"
             tools:ignore="NotSibling"
-            android:textColor="@color/black_color"/>
+            android:textColor="@color/black_color"
+            android:textSize="40sp"/>
 
     </RelativeLayout>
 

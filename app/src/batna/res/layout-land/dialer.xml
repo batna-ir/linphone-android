@@ -19,7 +19,6 @@
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:ellipsize="start"
-            android:textSize="2sp"
             android:hint="@string/address_bar_hint"
             android:inputType="textEmailAddress"
             android:textAlignment="center"
@@ -28,7 +27,8 @@
             android:textColorHint="@color/light_grey_color"
             android:background="@color/white_color"
             tools:ignore="SmallSp"
-            android:textColor="@color/black_color"/>
+            android:textColor="@color/black_color"
+            android:textSize="40sp"/>
 
     </RelativeLayout>
 
