@@ -47,6 +47,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import java.util.ArrayList;
+import org.linphone.BuildConfig;
 import org.linphone.LinphoneContext;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
@@ -464,6 +465,11 @@ public abstract class MainActivity extends LinphoneGenericActivity
     }
 
     public void showTabBar() {
+        // For now, we don't want to display the bottom bar
+        if (BuildConfig.IS_BATNA) {
+            mTabBar.setVisibility(View.GONE);
+            return;
+        }
         mTabBar.setVisibility(View.VISIBLE);
     }
 
