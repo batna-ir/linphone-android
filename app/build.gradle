@@ -131,8 +131,8 @@ android {
         flavorDimensions "free"
         batna{
             applicationId "ir.batna.talk"
-            versionCode 9812191
-            versionName "Esfand98-A"
+            versionCode 9812211
+            versionName "Esfand98-B"
             dimension "free"
             buildConfigField "boolean", "IS_BATNA", "true"
         }
