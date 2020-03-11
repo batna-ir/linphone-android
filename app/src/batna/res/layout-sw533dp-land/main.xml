@@ -9,7 +9,7 @@
         android:id="@+id/status_fragment"
         android:name="org.linphone.fragments.StatusBarFragment"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         tools:layout="@layout/status_bar" />
 
     <androidx.drawerlayout.widget.DrawerLayout
@@ -61,8 +61,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@id/footer"
                 android:layout_below="@id/top_bar"
+                android:layout_toEndOf="@+id/footer"
+                android:layout_toRightOf="@+id/footer"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
 
@@ -90,23 +91,21 @@
             </LinearLayout>
 
             <LinearLayout
-                android:baselineAligned="false"
                 android:id="@+id/footer"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:id="@+id/history"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="@drawable/footer_button">
 
                     <ImageView
-                        android:id="@+id/footer_history"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:contentDescription="@string/content_description_history"
@@ -115,9 +114,9 @@
 
                     <View
                         android:id="@+id/history_select"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:layout_alignParentBottom="true"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
                         android:background="?attr/accentColor"
                         android:visibility="gone" />
 
@@ -126,9 +125,10 @@
                         style="@style/unread_count_font"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:layout_margin="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
                         android:background="@drawable/unread_message_count_bg"
                         android:gravity="center"
                         android:visibility="gone" />
@@ -137,8 +137,8 @@
 
                 <RelativeLayout
                     android:id="@+id/contacts"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="@drawable/footer_button">
 
@@ -152,17 +152,17 @@
 
                     <View
                         android:id="@+id/contacts_select"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:layout_alignParentBottom="true"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
                         android:background="?attr/accentColor"
                         android:visibility="gone" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/dialer"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="@drawable/footer_button">
 
@@ -176,17 +176,17 @@
 
                     <View
                         android:id="@+id/dialer_select"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:layout_alignParentBottom="true"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
                         android:background="?attr/accentColor" />
 
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/chat"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="@drawable/footer_button">
 
@@ -194,15 +194,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:contentDescription="@string/content_description_chat"
+                        android:contentDescription="@string/content_description_chat_button"
                         android:padding="15dp"
                         android:src="@drawable/footer_chat" />
 
                     <View
                         android:id="@+id/chat_select"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:layout_alignParentBottom="true"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
                         android:background="?attr/accentColor"
                         android:visibility="gone" />
 
@@ -211,9 +211,10 @@
                         style="@style/unread_count_font"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:layout_margin="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
                         android:background="@drawable/unread_message_count_bg"
                         android:gravity="center"
                         android:visibility="gone" />
