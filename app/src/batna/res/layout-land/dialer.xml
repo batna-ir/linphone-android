@@ -28,7 +28,8 @@
             android:background="@color/white_color"
             tools:ignore="SmallSp"
             android:textColor="@color/black_color"
-            android:textSize="40sp"/>
+            android:textSize="40sp"
+            android:padding="5dp"/>
 
     </RelativeLayout>
 
@@ -82,7 +83,8 @@
                 android:layout_marginStart="70dp"
                 android:adjustViewBounds="true"
                 android:layout_marginBottom="10dp"
-                android:focusable="true">
+                android:focusable="true"
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/add_contact"

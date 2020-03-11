@@ -29,7 +29,8 @@
             android:textColorHint="@color/light_grey_color"
             tools:ignore="NotSibling"
             android:textColor="@color/black_color"
-            android:textSize="40sp"/>
+            android:textSize="40sp"
+            android:padding="5dp"/>
 
     </RelativeLayout>
 
@@ -59,7 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.1"
             android:adjustViewBounds="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/add_contact"
