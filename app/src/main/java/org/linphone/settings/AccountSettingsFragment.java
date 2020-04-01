@@ -593,8 +593,7 @@ public class AccountSettingsFragment extends SettingsFragment {
                                     if (mOutboundProxy.isChecked()) {
                                         mProxyConfig.setRoute(server);
                                     }
-                                    // mProxy.setValue(server);
-                                    mProxy.setValue("sip:voip.benevolence.ir:5080;transport=tcp");
+                                    mProxy.setValue(server);
                                 } catch (NumberFormatException nfe) {
                                     Log.e(nfe);
                                 }
@@ -639,7 +638,7 @@ public class AccountSettingsFragment extends SettingsFragment {
 
             mUsername.setValue(identityAddress.getUsername());
 
-            //            mDomain.setValue(identityAddress.getDomain());
+            mDomain.setValue(identityAddress.getDomain());
             //            mDomain.setValue("voip.benevolence.ir");
 
             mDisplayName.setValue(identityAddress.getDisplayName());

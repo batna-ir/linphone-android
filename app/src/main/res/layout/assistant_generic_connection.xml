@@ -131,7 +131,6 @@
                         android:contentDescription="@string/content_description_domain_field"
                         android:inputType="textUri"
                         android:maxLines="1"
-                        android:text="voip.benevolence.ir"
                         android:hint="@string/domain"
                         android:textColor="@color/black_color" />
 

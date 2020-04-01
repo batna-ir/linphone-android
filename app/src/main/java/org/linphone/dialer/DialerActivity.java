@@ -156,16 +156,20 @@ public class DialerActivity extends MainActivity implements AddressText.AddressC
         }
         if (BuildConfig.IS_BATNA) {
             // This piece of code helps avoid prepending country code to outgoing number(call)
-            ProxyConfig mProxyConfig = null;
-            ProxyConfig[] proxyConfigs = core.getProxyConfigList();
-            for (int i = 0; i < proxyConfigs.length; i++) {
-                if (proxyConfigs[i] != null) {
-                    mProxyConfig = proxyConfigs[i];
+            try {
+                ProxyConfig mProxyConfig = null;
+                ProxyConfig[] proxyConfigs = core.getProxyConfigList();
+                for (int i = 0; i < proxyConfigs.length; i++) {
+                    if (proxyConfigs[i] != null) {
+                        mProxyConfig = proxyConfigs[i];
+                    }
                 }
+                mProxyConfig.edit();
+                mProxyConfig.setDialPrefix("");
+                mProxyConfig.done();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            mProxyConfig.edit();
-            mProxyConfig.setDialPrefix("");
-            mProxyConfig.done();
         }
     }
 
