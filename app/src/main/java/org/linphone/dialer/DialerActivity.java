@@ -31,6 +31,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.asynclayoutinflater.view.AsyncLayoutInflater;
+import ir.batna.BatnaSetup;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
@@ -45,7 +46,6 @@ import org.linphone.contacts.ContactsManager;
 import org.linphone.core.Call;
 import org.linphone.core.Core;
 import org.linphone.core.CoreListenerStub;
-import org.linphone.core.ProxyConfig;
 import org.linphone.core.tools.Log;
 import org.linphone.dialer.views.AddressText;
 import org.linphone.dialer.views.Digit;
@@ -155,18 +155,9 @@ public class DialerActivity extends MainActivity implements AddressText.AddressC
             enableVideoPreviewIfTablet(true);
         }
         if (BuildConfig.IS_BATNA) {
-            // This piece of code helps avoid prepending country code to outgoing number(call)
             try {
-                ProxyConfig mProxyConfig = null;
-                ProxyConfig[] proxyConfigs = core.getProxyConfigList();
-                for (int i = 0; i < proxyConfigs.length; i++) {
-                    if (proxyConfigs[i] != null) {
-                        mProxyConfig = proxyConfigs[i];
-                    }
-                }
-                mProxyConfig.edit();
-                mProxyConfig.setDialPrefix("");
-                mProxyConfig.done();
+                BatnaSetup.removeCountryCode(core);
+                BatnaSetup.configureZRTP();
             } catch (Exception e) {
                 e.printStackTrace();
             }
