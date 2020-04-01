@@ -34,6 +34,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import org.linphone.BuildConfig;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.Core;
@@ -245,7 +246,9 @@ public class CallSettingsFragment extends SettingsFragment {
                         mPrefs.setMediaEncryptionMandatory(newValue);
                     }
                 });
-
+        if (BuildConfig.IS_BATNA) {
+            mMediaEncryptionMandatory.setChecked(true);
+        }
         mAndroidNotificationSettings.setListener(
                 new SettingListenerBase() {
                     @Override
@@ -307,7 +310,10 @@ public class CallSettingsFragment extends SettingsFragment {
 
         entries.add(getString(R.string.pref_none));
         values.add(String.valueOf(MediaEncryption.None.toInt()));
-
+        if (BuildConfig.IS_BATNA) {
+            entries.add("ZRTP");
+            values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
+        }
         Core core = LinphoneManager.getCore();
         if (core != null
                 && !getResources().getBoolean(R.bool.disable_all_security_features_for_markets)) {
