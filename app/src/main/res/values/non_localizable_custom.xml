@@ -121,8 +121,8 @@
 
     <!-- Side Menu -->
     <bool name="hide_assistant_from_side_menu">false</bool>
-    <bool name="hide_settings_from_side_menu">false</bool>
-    <bool name="hide_recordings_from_side_menu">false</bool>
+    <bool name="hide_settings_from_side_menu">true</bool>
+    <bool name="hide_recordings_from_side_menu">true</bool>
     <bool name="disable_accounts_settings_from_side_menu">false</bool>
     <bool name="show_log_out_in_side_menu">false</bool>
 
