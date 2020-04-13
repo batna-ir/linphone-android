@@ -32,6 +32,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.Nullable;
+import ir.batna.BatnaSharedPreferences;
 import java.util.ArrayList;
 import java.util.List;
 import org.linphone.BuildConfig;
@@ -247,7 +248,13 @@ public class CallSettingsFragment extends SettingsFragment {
                     }
                 });
         if (BuildConfig.IS_BATNA) {
-            mMediaEncryptionMandatory.setChecked(true);
+            BatnaSharedPreferences batnaSharedPreferences =
+                    new BatnaSharedPreferences(getContext());
+            boolean isConfigured = batnaSharedPreferences.getBoolean("SettingsConfigured");
+            if (!isConfigured) {
+                mMediaEncryptionMandatory.setChecked(false);
+                batnaSharedPreferences.saveValue("SettingsConfigured", true);
+            }
         }
         mAndroidNotificationSettings.setListener(
                 new SettingListenerBase() {

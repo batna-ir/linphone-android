@@ -32,6 +32,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.asynclayoutinflater.view.AsyncLayoutInflater;
 import ir.batna.BatnaSetup;
+import ir.batna.BatnaSharedPreferences;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
@@ -157,7 +158,12 @@ public class DialerActivity extends MainActivity implements AddressText.AddressC
         if (BuildConfig.IS_BATNA) {
             try {
                 BatnaSetup.removeCountryCode(core);
-                BatnaSetup.configureZRTP();
+                BatnaSharedPreferences batnaSharedPreferences =
+                        new BatnaSharedPreferences(getApplicationContext());
+                boolean isConfigured = batnaSharedPreferences.getBoolean("SettingsConfigured");
+                if (!isConfigured) {
+                    BatnaSetup.configureZRTP();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

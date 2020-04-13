@@ -26,6 +26,6 @@ public class BatnaSetup {
         LinphonePreferences linphonePreferences = LinphonePreferences.instance();
         MediaEncryption encryption = MediaEncryption.fromInt(2);
         linphonePreferences.setMediaEncryption(encryption);
-        linphonePreferences.setMediaEncryptionMandatory(true);
+        linphonePreferences.setMediaEncryptionMandatory(false);
     }
 }
