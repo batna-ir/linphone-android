@@ -13,7 +13,7 @@ General description is available from [linphone web site](https://www.linphone.o
 Copyright © Belledonne Communications
 
 Linphone is dual licensed, and is available either :
-
+23
  - under a [GNU/GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.en.html), for free (open source). Please make sure that you
 
 understand and agree with the terms of this license before using it (see LICENSE file for

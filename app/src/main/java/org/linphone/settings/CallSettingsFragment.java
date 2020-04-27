@@ -318,8 +318,8 @@ public class CallSettingsFragment extends SettingsFragment {
         entries.add(getString(R.string.pref_none));
         values.add(String.valueOf(MediaEncryption.None.toInt()));
         if (BuildConfig.IS_BATNA) {
-            entries.add("ZRTP");
-            values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
+            entries.add("SRTP");
+            values.add(String.valueOf(MediaEncryption.SRTP.toInt()));
         }
         Core core = LinphoneManager.getCore();
         if (core != null

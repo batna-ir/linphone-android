@@ -162,7 +162,7 @@ public class DialerActivity extends MainActivity implements AddressText.AddressC
                         new BatnaSharedPreferences(getApplicationContext());
                 boolean isConfigured = batnaSharedPreferences.getBoolean("SettingsConfigured");
                 if (!isConfigured) {
-                    BatnaSetup.configureZRTP();
+                    BatnaSetup.configureEncryption();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
