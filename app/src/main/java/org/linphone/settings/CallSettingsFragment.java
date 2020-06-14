@@ -331,9 +331,9 @@ public class CallSettingsFragment extends SettingsFragment {
             if (!hasSrtp && !hasZrtp && !hasDtls) {
                 mMediaEncryption.setEnabled(false);
             } else {
-                if (hasSrtp) {
-                    entries.add("SRTP");
-                    values.add(String.valueOf(MediaEncryption.SRTP.toInt()));
+                if (hasZrtp) {
+                    entries.add("ZRTP");
+                    values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
                 }
                 if (hasDtls) {
                     entries.add("DTLS");
