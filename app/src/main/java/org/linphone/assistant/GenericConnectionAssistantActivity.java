@@ -35,6 +35,7 @@ import org.linphone.core.AccountCreator;
 import org.linphone.core.Core;
 import org.linphone.core.TransportType;
 import org.linphone.core.tools.Log;
+import org.linphone.utils.GetServerAddress;
 
 public class GenericConnectionAssistantActivity extends AssistantActivity implements TextWatcher {
     private TextView mLogin;
@@ -49,7 +50,6 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.assistant_generic_connection);
 
         mLogin = findViewById(R.id.assistant_login);
@@ -71,6 +71,11 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
         mDomain = findViewById(R.id.assistant_domain);
         mDomain.addTextChangedListener(this);
         mTransport = findViewById(R.id.assistant_transports);
+
+        // set url from mdm-agent
+        if (getServerUrlFromMdm() != null) {
+            mDomain.setText(getServerUrlFromMdm());
+        }
     }
 
     private void configureAccount() {
@@ -99,6 +104,12 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
         }
 
         createProxyConfigAndLeaveAssistant(true);
+    }
+
+    /* Return Server Address from mdm-agent Application */
+    private String getServerUrlFromMdm() {
+        GetServerAddress mGetServerAddress = new GetServerAddress(this);
+        return mGetServerAddress.getUrl();
     }
 
     @Override

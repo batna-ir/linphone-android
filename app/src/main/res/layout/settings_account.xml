@@ -20,20 +20,21 @@
             linphone:title="@string/pref_username" />
 
         <org.linphone.settings.widget.TextSetting
-            android:id="@+id/pref_auth_userid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            linphone:subtitle="@string/pref_help_auth_userid"
-            linphone:hint="@string/pref_auth_userid"
-            linphone:title="@string/pref_auth_userid" />
-
-        <org.linphone.settings.widget.TextSetting
             android:id="@+id/pref_passwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             linphone:subtitle="@string/pref_help_password"
             linphone:hint="@string/pref_passwd"
-            linphone:title="@string/pref_passwd" />
+            linphone:title="@string/pref_passwd" >
+
+            <org.linphone.settings.widget.TextSetting
+                android:id="@+id/pref_auth_userid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                linphone:hint="@string/pref_auth_userid"
+                linphone:subtitle="@string/pref_help_auth_userid"
+                linphone:title="@string/pref_auth_userid" />
+        </org.linphone.settings.widget.TextSetting>
 
         <org.linphone.settings.widget.TextSetting
             android:id="@+id/pref_domain"
