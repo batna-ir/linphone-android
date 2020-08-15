@@ -318,8 +318,8 @@ public class CallSettingsFragment extends SettingsFragment {
         entries.add(getString(R.string.pref_none));
         values.add(String.valueOf(MediaEncryption.None.toInt()));
         if (BuildConfig.IS_BATNA) {
-            entries.add("SRTP");
-            values.add(String.valueOf(MediaEncryption.SRTP.toInt()));
+            entries.add("ZRTP");
+            values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
         }
         Core core = LinphoneManager.getCore();
         if (core != null
@@ -331,9 +331,9 @@ public class CallSettingsFragment extends SettingsFragment {
             if (!hasSrtp && !hasZrtp && !hasDtls) {
                 mMediaEncryption.setEnabled(false);
             } else {
-                if (hasZrtp) {
-                    entries.add("ZRTP");
-                    values.add(String.valueOf(MediaEncryption.ZRTP.toInt()));
+                if (hasSrtp) {
+                    entries.add("SRTP");
+                    values.add(String.valueOf(MediaEncryption.SRTP.toInt()));
                 }
                 if (hasDtls) {
                     entries.add("DTLS");

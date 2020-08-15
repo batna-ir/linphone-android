@@ -24,7 +24,7 @@ public class BatnaSetup {
     // Configures ZRTP and media encryption by default
     public static void configureEncryption() {
         LinphonePreferences linphonePreferences = LinphonePreferences.instance();
-        MediaEncryption encryption = MediaEncryption.fromInt(1);
+        MediaEncryption encryption = MediaEncryption.fromInt(2);
         linphonePreferences.setMediaEncryption(encryption);
         linphonePreferences.setMediaEncryptionMandatory(false);
     }
