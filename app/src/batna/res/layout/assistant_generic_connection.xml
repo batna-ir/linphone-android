@@ -195,7 +195,6 @@
                             android:layout_margin="5dp"
                             android:textColor="?attr/primaryTextColor"
                             android:text="@string/pref_transport_udp"
-                            android:checked="true"
                             />
 
 <!--                        android:checked="true"-->
@@ -205,7 +204,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:textColor="?attr/primaryTextColor"
-                            android:text="@string/pref_transport_tcp" />
+                            android:text="@string/pref_transport_tcp"
+                            android:checked="true" />
 
                         <RadioButton
                             android:id="@+id/transport_tls"
