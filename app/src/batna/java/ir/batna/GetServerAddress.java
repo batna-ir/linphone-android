@@ -1,4 +1,4 @@
-package org.linphone.utils;
+package ir.batna;
 
 import android.content.Context;
 import android.database.Cursor;
