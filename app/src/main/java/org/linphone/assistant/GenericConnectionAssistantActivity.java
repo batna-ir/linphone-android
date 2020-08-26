@@ -30,6 +30,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import io.github.inflationx.viewpump.ViewPumpContextWrapper;
 import ir.batna.GetServerAddress;
+import org.linphone.BuildConfig;
 import org.linphone.LinphoneManager;
 import org.linphone.R;
 import org.linphone.core.AccountCreator;
@@ -73,8 +74,10 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
         mTransport = findViewById(R.id.assistant_transports);
 
         // set url from mdm-agent
-        if (getServerUrlFromMdm() != null) {
-            mDomain.setText(getServerUrlFromMdm());
+        if (BuildConfig.IS_BATNA) {
+            if (getServerUrlFromMdm() != null) {
+                mDomain.setText(getServerUrlFromMdm());
+            }
         }
     }
 
@@ -106,7 +109,9 @@ public class GenericConnectionAssistantActivity extends AssistantActivity implem
         createProxyConfigAndLeaveAssistant(true);
     }
 
-    /* Return Server Address from mdm-agent Application */
+    /**
+     * Return Server Address from mdm-agent Application
+     */
     private String getServerUrlFromMdm() {
         GetServerAddress mGetServerAddress = new GetServerAddress(this);
         return mGetServerAddress.getUrl();
